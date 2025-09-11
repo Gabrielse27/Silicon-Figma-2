@@ -1,0 +1,671 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+.page {
+  height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+:root {
+  --color-body-background: #FFFFFF;
+  --gray: #E5E5E5;
+  --brand: #0D99FF;
+  --system: #F24822;
+  
+  --color-heading-text: #0B0F19;
+  --green:  #22C55E;
+  --gray:  #E2E5F1;
+  --container: 1200px;
+}
+body {
+   font-family: "Manrope", sans-serif; 
+   font-weight:400;
+  margin: 80px;
+   color: #565973;
+   color: var(--color-body-text);
+   background-color: var(--color-body-background);
+  
+  padding: 0px;
+}
+.container-hero-grid {
+background: #FFFFFF;
+background: linear-gradient(180deg,rgba(255, 255, 255, 1) 0%, rgba(214, 70, 239, 0.05) 42%, rgba(99, 102, 241, 0.1) 83%);
+}
+
+
+.hero-left{
+  padding-top: 600px;
+  margin-top: 300px;
+}
+
+.hero-left h1 {
+    
+    font-size: 20px;  
+    text-align:left; 
+    margin-bottom: 20px;/* mindre rubrik */
+    margin-top: 200px;
+  }
+
+.hero-left p {
+    font-size: 12px;
+  color: #565973;
+  text-align: left;
+  justify-content:flex-end;
+  height: 100px;
+  margin: 0;
+  
+ }
+ .app-buttons {
+
+   display: flex;
+   gap: 20px;
+   margin-top: 200px;
+   transform: translateY(1400px);
+   margin-left: 40px;
+ }
+
+.logos {
+  width: 100%;
+    margin:0 auto;
+    margin-bottom: 0px;
+    margin-top: 1500px;
+    
+}
+
+.tvåmobiler {
+display: block;
+margin: 0 auto;
+text-align: right;
+margin-right: 20px;
+margin-top: -375px;
+}
+
+
+
+.container { max-width: var(--container);
+     margin-inline: auto;
+     padding-inline: 24px;
+    
+     }
+
+/* Header */
+.site-header {
+    
+  position: sticky; top: 0;
+  background: #fff;
+  
+  z-index: 50;
+}
+
+/* Grid-layout för headern: 2 kolumner (vänster/höger) */
+.header-grid {
+    
+  display: grid;
+  grid-template-columns: 1fr auto; /* brand vänster, actions höger */
+  align-items: center;
+  height: 64px;
+}
+
+/* Varje “logga/ikon” ska synas tydligt */
+.brand img { height: 28px; display: block; }
+
+
+
+/* Höger kluster – använder grid (inte flex) */
+.header-actions {
+    
+  display: grid;
+  grid-auto-flow: column;   /* lägg barn i rad */
+  gap: 16px;
+  align-items: center;
+}
+
+/* Dark mode-knapp (ikon + text) – också grid */
+.darkmode-btn {
+    
+  display: grid;
+  grid-template-columns: 20px auto;
+  align-items: center;
+  gap: 200px;
+  
+  background: #fff;
+  padding: 6px 10px;
+
+  cursor: pointer;
+}
+.darkmode-btn img { height: 18px; display: block; }
+.darkmode-btn span { font-size: 13px; color: #444; }
+
+/* Sign in / up – visar din knappgrafik */
+.signin-btn img { height: 28px; display: block; }
+
+.section-head h2 {
+  font-size: 20px;
+   display: block;  
+      /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 282px;
+    margin-top: 45px;
+
+}
+
+.section-head p {
+   font-size: 10px;
+   display: block;   
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 1px;
+    margin-top: 40px;
+    color: #565973
+
+}
+
+
+   
+
+.easypayments {
+display: block;  
+      /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 378px;
+    margin-top: -250px;
+}
+.easypayments-text h3 {
+   font-size: 10px;
+   display: block;   
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 280px;
+    margin-top: -38px;
+}
+
+.easypayments-text p {
+   font-size: 8px;
+   display: block;   
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 205px;
+    margin-top: 15px;
+    color: #565973
+}
+
+.coststatistics {
+
+display: block;  
+      /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 378px;
+    margin-top: 25px;
+
+}
+.coststatistics-text h3 {
+   font-size: 10px;
+   display: block;   
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 283px;
+    margin-top: -37px;
+}
+
+.coststatistics-text p {
+   font-size: 8px;
+   display: block;   
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 240px;
+    margin-top: 15px;
+    color: #565973
+}
+
+.regularcashback {
+
+display: block;  
+      /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 378px;
+    margin-top: 25px;
+}
+
+.regularcashback-text h3 {
+   font-size: 10px;
+   display: block;   
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 260px;
+    margin-top: -37px;
+}
+.regularcashback-text p {
+   font-size: 8px;
+   display: block;   
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 205px;
+    margin-top: 15px;
+    color: #565973
+}
+
+.datasecurity {
+
+display: block;  
+      /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 150px;
+    margin-top: -215px;
+}
+.datasecurity-text h3 {
+   font-size: 10px;
+   display: block;   
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 70px;
+    margin-top: -37px;
+}
+.datasecurity-text p {
+   font-size: 8px;
+   display: block;   
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 20px;
+    margin-top: 15px;
+    color: #565973
+}
+
+.support {
+
+display: block;  
+      /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 150px;
+    margin-top: 25px;
+}
+.support-text h3 {
+   font-size: 10px;
+   display: block;   
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 70px;
+    margin-top: -37px;
+}
+.support-text p {
+   font-size: 8px;
+   display: block;   
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 1px;
+    margin-top: 15px;
+    color: #565973
+}
+
+.topstandards {
+
+display: block;  
+      /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 150px;
+    margin-top: 25px;
+}
+.topstandards-text h3 {
+   font-size: 10px;
+   display: block;   
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 65px;
+    margin-top: -37px;
+}
+.topstandards-text p {
+   font-size: 8px;
+   display: block;   
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 3px;
+    margin-top: 15px;
+    color: #565973
+}
+.section--isolated {
+  display: flow-root;   /* Skapar BFC */
+  margin-block: 40px;   /* Luft mellan sektioner */
+}
+
+
+
+.tremobiler {
+
+    display: block;        /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 93px;
+    margin-top: 50px;
+}
+.section-head h2 {
+    font-size: 20px;
+     display: block;  
+        /* gör att margin fungerar */
+        margin: 0 auto;       /* centrerar bilden */
+     text-align: right;
+        margin-right: 282px;
+        margin-top: 150px;
+        padding: 0px;
+}
+
+.tremobiler-text h3 {
+    font-size: 12px;
+    display: block;   
+     margin: 0 auto;       /* centrerar bilden */
+    text-align: right;
+     margin-right: 290px;
+     margin-top: 40px;
+}
+.tremobiler-text p {
+    font-size: 6px;
+    display: block;   
+     margin: 0 auto;       /* centrerar bilden */
+    text-align: center;
+     margin-right: -70px;
+     margin-top: 5px;
+     color: #565973
+}
+
+.steps {
+   background: #f5f8ff;
+    /* ljusblå bakgrund */
+  justify-content: center;
+  
+
+}
+
+.diagram_app_future{
+    display: block;        /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 50px;
+    margin-top: -260px;
+}
+.split-text h3 {
+    font-size: 20px;
+    display: block;   
+     margin: 0 auto;       /* centrerar bilden */
+    text-align:left;
+     margin-right: 193px;
+     margin-top: 300px;
+}
+.feature-bullets p{
+    font-size: 10px; 
+    text-align:left; 
+    margin-left: 20px;
+    margin-bottom: -500;
+    margin-top: 10px;
+    color: #565973; 
+
+}
+.blue-icon__a {
+     display: block;   
+     margin: 0 auto;       /* centrerar bilden */
+    text-align:left;
+     margin-left: 4px;
+     margin-top: -50px;
+
+}
+.blue-icon__b {
+ display: block;   
+     margin: 0 auto;       /* centrerar bilden */
+    text-align:left;
+     margin-left: 4px;
+     margin-top:4px;
+}
+.blue-icon__c {
+    display: block;   
+     margin: 0 auto;       /* centrerar bilden */
+    text-align:left;
+     margin-left: 4px;
+     margin-top:4px;
+
+}
+
+
+     
+
+.learn-more-btn {
+   display: block;        /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: left;
+    margin-left: 1px;
+    margin-top: 50px;
+    
+}
+
+
+.learn-more-btn-b{
+    display: block;        /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 500px;
+    margin-top: 60px;
+    margin-bottom: 0px;
+
+}
+
+  
+.section--isolated {
+  display: flow-root;   /* Skapar BFC */
+  margin-block: 40px;   /* Luft mellan sektioner */
+}
+
+.future-card__icon {
+    display: block;        /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+    text-align: right;
+    margin-right: 180px;
+    margin-top: 250px;
+}
+.future-card__title h4 {
+    font-size: 15px;
+    display: block;        /* gör att margin fungerar */       /* centrerar bilden */
+    text-align: right;
+    margin-right: 230px;
+    margin-top: -90px;
+}
+.future-card__cback {
+ display: block;  
+      /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 120px;
+    margin-top: -12px;
+}
+.future-card__body p {
+    font-size: 8px;
+    display: block;        /* gör att margin fungerar */       /* centrerar bilden */
+    text-align: right;
+    margin-right: 159px;
+    margin-top: 5px; 
+     color: #565973
+}
+    
+.future-card__b p {
+    font-size: 8px;
+    display: block;        /* gör att margin fungerar */       /* centrerar bilden */
+    text-align: right;
+    margin-right: 290px;
+    margin-top: -29px; 
+    color: #565973
+
+}
+.learn-more-btn__f {
+  display: block;        /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+    text-align: left;
+    margin-right: 164px;
+    margin-top: 30px;
+
+}
+.contact-visa {
+display: block;        /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+    text-align: left;
+    margin-left: 10px;
+    margin-top: -240px;
+}
+
+.section--isolated {
+  display: flow-root;   /* Skapar BFC */
+  margin-block: 40px;   /* Luft mellan sektioner */
+}
+
+.section-title-testimon {
+    font-size: 14px;
+display: block;        /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 100px;
+
+}
+.citattecken-va {
+  display: block;        /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 100px;
+    margin-top: -20px;
+    margin-bottom: 0px;
+
+}
+.testimonial-head-va {
+   background-color: #ffffff;   /* vit bakgrund */
+  padding: 20px;               /* luft inuti rutan */
+  border-radius: 10px;         /* rundade hörn */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* skugga */
+  width: 230px;   
+  height: 200px;         /* fast bredd */
+  margin: 28px; 
+  float:right;
+  margin-left: 20px;
+}
+.avatar-ho {
+  display: inline-block;   /* gör så att text-align fungerar */
+  text-align: right;       /* om du vill ha den högerställd */           /* bästa sättet: skickar bilden till höger */
+  margin-right: -75px;      /* avstånd från kanten */
+  margin-top: -20px;
+  float: right;  
+    
+}
+.name-ho, .meta-ho  {
+display: block;        /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+    text-align: left;
+    margin-right: 150px;
+    margin-top: 30px;
+
+}
+.cittat-img-va {
+  display: inline-block;   /* gör så att text-align fungerar */
+  text-align: right;       /* om du vill ha den högerställd */           /* bästa sättet: skickar bilden till höger */
+  margin-right: 130px;      /* avstånd från kanten */
+  margin-top: 10px;
+  float: right; 
+
+}
+.stars-va {
+color: gold;          /* gör stjärnorna gula */
+  font-size: 20px;      /* större storlek */
+  letter-spacing: 2px;
+}
+.testimonial-text-va {
+font-size: 10px;
+
+
+}
+.section--isolated {
+  display: flow-root;   /* Skapar BFC */
+  margin-block: 100px;   /* Luft mellan sektioner */
+}
+
+.subscribe-btn {
+  display: block;        /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: -28px;
+    margin-top: -33px;
+    margin-bottom: 0px;
+}
+
+
+/* Inputfältet */
+.input {
+flex: 1;                   /* Gör så fältet tar all plats till vänster */
+  padding: 10px;
+  font-size: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: -20px;
+  top: -10px;
+  width: 210px;
+
+}
+.subscribe-form {
+  display: block; 
+  font-size: 10px;       /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: right;
+    margin-right: 160px;
+    margin-top: -40px;
+    margin-bottom: 0px; 
+}
+h6.subscribe-text  {
+   font-size: 10x;
+    display: block;        /* gör att margin fungerar */       /* centrerar bilden */
+    text-align: left;
+    margin-left: 110px;
+    margin-top: -40px;
+}
+.subscribe-icon {
+display: block;        /* gör att margin fungerar */
+    margin: 0 auto;       /* centrerar bilden */
+   text-align: left;
+    margin-left: 60px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+.subscribe {
+  background: #f5f8ff;      /* ljusblå bakgrund */
+  padding: 40px 20px;       /* luft inuti bakgrunden */
+  border-radius: 10px;      /* rundade hörn */
+  margin: 40px auto;        /* flytta ner rutan på sidan */
+  max-width: 1000px; 
+  height: 40px;
+
+}
+site-footer {
+  background-color: #e5e5e5; /* ljusgrå bakgrund */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between; /* sprider ut vänster och mitten */
+  align-items: center;
+  font-size: 14px;
+  
+}
+.footer-center {
+    font-size: 10px;
+  text-align: center;
+  flex-grow: 1; /* gör att den centreras fint */
+  color: #9397AD; 
+}
+
+
+
+
+
+
+
+/* Responsiv: på små skärmar, lite mindre avstånd */
+@media (max-width: 480px){
+  .header-grid { height: 56px; }
+  .header-actions { gap: 10px; }
+  .brand img { height: 24px; }
+  .signin-btn img { height: 26px; }
+}
