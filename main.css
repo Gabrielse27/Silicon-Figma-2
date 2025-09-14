@@ -339,7 +339,7 @@ display: block;
     display: block;        /* gör att margin fungerar */
     margin: 0 auto;       /* centrerar bilden */
    text-align: right;
-    margin-right: 93px;
+    margin-right: 305px;
     margin-top: 50px;
 }
 .section-head h2 {
@@ -348,7 +348,7 @@ display: block;
         /* gör att margin fungerar */
         margin: 0 auto;       /* centrerar bilden */
      text-align: right;
-        margin-right: 282px;
+        margin-right: 486px;
         margin-top: 150px;
         padding: 0px;
 }
@@ -358,7 +358,7 @@ display: block;
     display: block;   
      margin: 0 auto;       /* centrerar bilden */
     text-align: right;
-     margin-right: 290px;
+     margin-right: 500px;
      margin-top: 40px;
 }
 .tremobiler-text p {
