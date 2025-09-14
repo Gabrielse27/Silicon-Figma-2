@@ -375,9 +375,13 @@ display: block;
    background: #f5f8ff;
     /* ljusblå bakgrund */
   justify-content: center;
-  
+  }
 
+  .section--isolated {
+  display: flow-root;   /* Skapar BFC */
+  margin-block: 40px;   /* Luft mellan sektioner */
 }
+
 
 .diagram_app_future{
     display: block;        /* gör att margin fungerar */
