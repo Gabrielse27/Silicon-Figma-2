@@ -521,6 +521,20 @@ display: block;        /* gör att margin fungerar */
   margin-block: 40px;   /* Luft mellan sektioner */
 }
 
+
+.container {
+    width: 100%;
+   max-width: 1320px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 1rem;
+   padding-right: 1rem;
+
+}
+.testimonials-area-va{
+
+
+
 .section-title-testimon {
     font-size: 14px;
 display: block;        /* gör att margin fungerar */
@@ -550,6 +564,25 @@ display: block;        /* gör att margin fungerar */
   float:right;
   margin-left: 20px;
 }
+.cittat-img-va {
+  display: inline-block;   /* gör så att text-align fungerar */
+  text-align: right;       /* om du vill ha den högerställd */           /* bästa sättet: skickar bilden till höger */
+  margin-right: 130px;      /* avstånd från kanten */
+  margin-top: 10px;
+  float: right; 
+
+}
+.stars-va {
+color: gold;          /* gör stjärnorna gula */
+  font-size: 20px;      /* större storlek */
+  letter-spacing: 2px;
+}
+.testimonial-text-va {
+font-size: 10px;
+}
+}
+
+
 .avatar-ho {
   display: inline-block;   /* gör så att text-align fungerar */
   text-align: right;       /* om du vill ha den högerställd */           /* bästa sättet: skickar bilden till höger */
@@ -566,24 +599,8 @@ display: block;        /* gör att margin fungerar */
     margin-top: 30px;
 
 }
-.cittat-img-va {
-  display: inline-block;   /* gör så att text-align fungerar */
-  text-align: right;       /* om du vill ha den högerställd */           /* bästa sättet: skickar bilden till höger */
-  margin-right: 130px;      /* avstånd från kanten */
-  margin-top: 10px;
-  float: right; 
-
-}
-.stars-va {
-color: gold;          /* gör stjärnorna gula */
-  font-size: 20px;      /* större storlek */
-  letter-spacing: 2px;
-}
-.testimonial-text-va {
-font-size: 10px;
 
 
-}
 .section--isolated {
   display: flow-root;   /* Skapar BFC */
   margin-block: 100px;   /* Luft mellan sektioner */
