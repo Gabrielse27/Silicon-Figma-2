@@ -339,10 +339,10 @@ display: block;
     display: block;        /* gör att margin fungerar */
     margin: 0 auto;       /* centrerar bilden */
    text-align: right;
-    margin-right: 305px;
+    margin-right: 290px;
     margin-top: 50px;
 }
-.section-head h2 {
+.section-head-center h2 {
     font-size: 20px;
      display: block;  
         /* gör att margin fungerar */
@@ -362,16 +362,16 @@ display: block;
      margin-top: 40px;
 }
 .tremobiler-text p {
-    font-size: 6px;
+    font-size: 8px;
     display: block;   
      margin: 0 auto;       /* centrerar bilden */
     text-align: center;
-     margin-right: -70px;
+    margin-right: -70px;
      margin-top: 5px;
      color: #565973
 }
 
-.steps {
+.how-does-it-work {
    background: #f5f8ff;
     /* ljusblå bakgrund */
   justify-content: center;
