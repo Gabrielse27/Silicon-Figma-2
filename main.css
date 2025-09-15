@@ -36,31 +36,24 @@ body {
 background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(99, 102, 241, 0.07) 83%);
 padding-top: 5rem;
 
-  .hero-area{
-     display: flex;
-     justify-content: space-between;
+    .hero-area {
+    display: flex;
+    justify-content: space-between;
+    
+    
+     
+    @media (width >=768px) {
+      flex-direction: row;
+    }
 
-     .hero-content{
-
-     }
-
-       .hero-image{
-
+       .hero-content {
+         flex: 1;
        }
 
-
-
-  }
-
-
-
-
-
-
-
-
-
-
+        .hero-image {
+          flex: 1;
+       }
+    }
 }
 
   
