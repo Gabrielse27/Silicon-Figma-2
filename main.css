@@ -76,7 +76,7 @@ padding-top: 5rem;
 
 
         .hero-image {
-        
+        margin-top: 50px;
           
        }
     }
@@ -87,13 +87,18 @@ padding-top: 5rem;
 
  
 
-.logos {
-  width: 100%;
-    margin:0 auto;
-    margin-bottom: 0px;
-    margin-top: 1500px;
-    
+.brands {
+  background-color: #ffffff;
+  
+
+   .logo {
+   background-color: #ffffff;
+   padding-top: 0;
+   margin-top: -110px;
+   border: 1px solid #fff;
+   }
 }
+  
 
 
 
