@@ -52,10 +52,15 @@ padding-top: 5rem;
     }
 
        .hero-content {
+        flex-direction: column;
+        gap: 2rem;
+
 
         .hero-title {
+          display: flex;
           font-size: 56px;
           font-weight: 800;
+          
 
 
         }
