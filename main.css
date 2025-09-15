@@ -88,16 +88,24 @@ padding-top: 5rem;
  
 
 .brands {
-  background-color: #ffffff;
+  background-color: #361616;
+  
+  
+}
+  
   
 
    .logo {
    background-color: #ffffff;
-   padding-top: 0;
+   display: flex;
+   justify-content: center;
+   
+   padding: 20px;
+   border-radius: 10px;
    margin-top: -110px;
    border: 1px solid #fff;
    }
-}
+
   
 
 
@@ -577,7 +585,7 @@ display: block;        /* gör att margin fungerar */
 
 }
 .testimonial-head-va {
-   background-color: #ffffff;   /* vit bakgrund */
+   background-color: #8f2d2d;   /* vit bakgrund */
   padding: 20px;               /* luft inuti rutan */
   border-radius: 10px;         /* rundade hörn */
   box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* skugga */
@@ -684,7 +692,7 @@ display: block;        /* gör att margin fungerar */
   height: 40px;
 
 }
-site-footer {
+.site-footer {
   background-color: #e5e5e5; /* ljusgrå bakgrund */
   padding: 15px 20px;
   display: flex;
