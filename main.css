@@ -39,19 +39,40 @@ padding-top: 5rem;
     .hero-area {
     display: flex;
     justify-content: space-between;
+    gap: 3rem;
+    text-align: center;
     
     
      
     @media (width >=768px) {
-      flex-direction: row;
+      grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: left;
+    
     }
 
        .hero-content {
-         flex: 1;
+
+        .hero-title {
+          font-size: 56px;
+          font-weight: 800;
+
+
+        }
+         
+        .hero-ingress {
+          font-size: 18px;
+          font-weight: 400;
+          white-space: normal;
+          
+        }
+         
        }
 
+
         .hero-image {
-          flex: 1;
+        
+          
        }
     }
 }
