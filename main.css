@@ -88,7 +88,18 @@ padding-top: 5rem;
  
 
 .brands {
-  background-color: #361616;
+  background-color: #ffffff;
+  height: auto;
+  display: inline-block;
+  height: 10px;
+  text-align: center;
+  width: 100%;
+  
+
+
+  
+  
+  
   
   
 }
@@ -97,13 +108,16 @@ padding-top: 5rem;
 
    .logo {
    background-color: #ffffff;
-   display: flex;
-   justify-content: center;
-   
-   padding: 20px;
-   border-radius: 10px;
-   margin-top: -110px;
+   margin-top: -50px;
    border: 1px solid #fff;
+  
+  
+   
+  
+   
+  
+   
+   
    }
 
   
