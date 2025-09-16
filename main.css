@@ -27,6 +27,18 @@ body {
   padding: 0px;
 }
 
+.darkmode-btn {
+    
+  display: grid;
+  grid-template-columns: 20px auto;
+  align-items: center;
+  gap: 200px;
+  padding: 6px 10px;
+  cursor: pointer;
+  width: 150px;
+}
+
+
 
 
 
@@ -150,24 +162,7 @@ padding-top: 5rem;
   align-items: center;
 }
 
-/* Dark mode-knapp (ikon + text) – också grid */
-.darkmode-btn {
-    
-  display: grid;
-  grid-template-columns: 20px auto;
-  align-items: center;
-  gap: 200px;
-  
-  background: #fff;
-  padding: 6px 10px;
 
-  cursor: pointer;
-}
-.darkmode-btn img { height: 18px; display: block; }
-.darkmode-btn span { font-size: 13px; color: #444; }
-
-/* Sign in / up – visar din knappgrafik */
-.signin-btn img { height: 28px; display: block; }
 
 .section-head h2 {
   font-size: 20px;
