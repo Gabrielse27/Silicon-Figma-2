@@ -175,6 +175,7 @@ padding-top: 5rem;
    padding-top: 80px;
    margin-top: -100px;
    border: 1px solid #fff;
+   
   
   
     }
@@ -182,7 +183,7 @@ padding-top: 5rem;
   }
 
 .section-head h2 {
-  font-size: 20px;
+  font-size: 40px;
    display: block;  
       /* gör att margin fungerar */
     margin: 0 auto;       /* centrerar bilden */
@@ -192,7 +193,7 @@ padding-top: 5rem;
 }
 
 .section-head p {
-   font-size: 10px;
+   font-size: 18px;
    display: block;   
     margin: 0 auto;       /* centrerar bilden */
    text-align: right;
@@ -211,11 +212,11 @@ display: block;
     margin-top: -250px;
 }
 .easypayments-text h3 {
-   font-size: 10px;
+   font-size: 12px;
    display: block;   
     margin: 0 auto;       /* centrerar bilden */
    text-align: right;
-    margin-right: 280px;
+    margin-right: 268px;
     margin-top: -38px;
 }
 
@@ -391,16 +392,16 @@ display: block;
         padding: 0px;
 }
 
-.tremobiler-text h3 {
-    font-size: 20px;
+.tremobiler-text h4 {
+    font-size: 24px;
     display: block;   
      margin: 0 auto;       /* centrerar bilden */
     text-align: right;
-     margin-right: 530px;
+     margin-right: 510px;
      margin-top: 40px;
 }
 .tremobiler-text p {
-    font-size: 10px;
+    font-size: 16px;
     display: block;   
      margin: 0 auto;       /* centrerar bilden */
     text-align: center;
@@ -429,8 +430,8 @@ display: block;
     margin-right: 50px;
     margin-top: -260px;
 }
-.split-text h3 {
-    font-size: 20px;
+.split-text h2 {
+    font-size: 32px;
     display: block;   
      margin: 0 auto;       /* centrerar bilden */
     text-align:left;
@@ -438,7 +439,7 @@ display: block;
      margin-top: 300px;
 }
 .feature-bullets p{
-    font-size: 10px; 
+    font-size: 16px; 
     text-align:left; 
     margin-left: 20px;
     margin-bottom: -500;
@@ -450,23 +451,23 @@ display: block;
      display: block;   
      margin: 0 auto;       /* centrerar bilden */
     text-align:left;
-     margin-left: 4px;
-     margin-top: -50px;
+     margin-left: 0px;
+     margin-top: -78px;
 
 }
 .blue-icon__b {
  display: block;   
      margin: 0 auto;       /* centrerar bilden */
     text-align:left;
-     margin-left: 4px;
-     margin-top:4px;
+     margin-left: 0px;
+     margin-top:3px;
 }
 .blue-icon__c {
     display: block;   
      margin: 0 auto;       /* centrerar bilden */
     text-align:left;
-     margin-left: 4px;
-     margin-top:4px;
+     margin-left: 0px;
+     margin-top: 2px;
 
 }
 
@@ -507,10 +508,10 @@ display: block;
     margin-top: 250px;
 }
 .future-card__title h4 {
-    font-size: 15px;
+    font-size: 16px;
     display: block;        /* gör att margin fungerar */       /* centrerar bilden */
     text-align: right;
-    margin-right: 230px;
+    margin-right: 220px;
     margin-top: -90px;
 }
 .future-card__cback {
@@ -568,74 +569,6 @@ display: block;        /* gör att margin fungerar */
    margin-right: auto;
    padding-left: 1rem;
    padding-right: 1rem;
-
-}
-.testimonials-area-va{
-
-
-
-.section-title-testimon {
-    font-size: 14px;
-display: block;        /* gör att margin fungerar */
-    margin: 0 auto;       /* centrerar bilden */
-    text-align: left;
-    margin-left: 10px;
-    margin-top: 100px;
-
-}
-.citattecken-va {
-  display: block;        /* gör att margin fungerar */
-    margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
-    margin-right: 100px;
-    margin-top: -20px;
-    margin-bottom: 0px;
-
-}
-.testimonial-head-va {
-   background-color: #8f2d2d;   /* vit bakgrund */
-  padding: 20px;               /* luft inuti rutan */
-  border-radius: 10px;         /* rundade hörn */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* skugga */
-  width: 230px;   
-  height: 200px;         /* fast bredd */
-  margin: 28px; 
-  float:right;
-  margin-left: 20px;
-}
-.cittat-img-va {
-  display: inline-block;   /* gör så att text-align fungerar */
-  text-align: right;       /* om du vill ha den högerställd */           /* bästa sättet: skickar bilden till höger */
-  margin-right: 130px;      /* avstånd från kanten */
-  margin-top: 10px;
-  float: right; 
-
-}
-.stars-va {
-color: gold;          /* gör stjärnorna gula */
-  font-size: 20px;      /* större storlek */
-  letter-spacing: 2px;
-}
-.testimonial-text-va {
-font-size: 10px;
-}
-}
-
-
-.avatar-ho {
-  display: inline-block;   /* gör så att text-align fungerar */
-  text-align: right;       /* om du vill ha den högerställd */           /* bästa sättet: skickar bilden till höger */
-  margin-right: -75px;      /* avstånd från kanten */
-  margin-top: -20px;
-  float: right;  
-    
-}
-.name-ho, .meta-ho  {
-display: block;        /* gör att margin fungerar */
-    margin: 0 auto;       /* centrerar bilden */
-    text-align: left;
-    margin-right: 150px;
-    margin-top: 30px;
 
 }
 
