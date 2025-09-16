@@ -572,6 +572,36 @@ display: block;        /* gör att margin fungerar */
 
 }
 
+.testimonials-area {
+display: grid;
+  justify-content: space-between;
+
+
+  .actions-va {
+  
+
+  }
+
+
+
+
+
+   .actions-ho {
+  
+
+
+
+
+
+   }
+
+}
+
+.text-one {
+margin-left: 40px;
+
+}
+
 
 .section--isolated {
   display: flow-root;   /* Skapar BFC */
