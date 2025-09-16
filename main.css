@@ -39,14 +39,15 @@ body {
   align-items: center;
   height: 100px;
 }
-      .silicon-btn {
 
-        display: grid;
-        align-items: center;
-        gap: 200px;
-        padding: 6px 10px;
-        cursor: pointer;
-        width: 50px;
+.silicon-btn {
+
+  display: grid;
+  align-items: center;
+  gap: 200px;
+  padding: 6px 10px;
+  cursor: pointer;
+  width: 50px;
       
       }
 
@@ -69,12 +70,12 @@ body {
   
     }
 
-    .signin-btn {
+.signin-btn {
       display: grid;
       width: 80%;
       margin-right: 30px;
     }
-  .silicon-btn {
+.silicon-btn {
 
     width: 40%;
   }
@@ -140,10 +141,6 @@ padding-top: 5rem;
   text-align: center;
   width: 100%;
     
-
-  
-  
-
    .logo {
 
    background-color: #ffffff;
@@ -154,9 +151,6 @@ padding-top: 5rem;
     }
 
   }
-
-
-
 
 
 .container { max-width: var(--container);
@@ -699,10 +693,6 @@ display: block;        /* gör att margin fungerar */
   flex-grow: 1; /* gör att den centreras fint */
   color: #9397AD; 
 }
-
-
-
-
 
 
 
