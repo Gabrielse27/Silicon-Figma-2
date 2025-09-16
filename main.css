@@ -573,29 +573,36 @@ display: block;        /* gör att margin fungerar */
 }
 
 .testimonials-area {
-display: grid;
+display: flex;
   justify-content: space-between;
+}
 
 
-  .actions-va {
+
+.actions-va {
   
+
+  .testimonials-va{
 
   }
-
-
-
-
-
-   .actions-ho {
-  
-
-
-
-
-
-   }
-
 }
+
+
+
+
+
+  .actions-ho {
+    
+
+    .testimonials-va {
+
+
+    }
+
+
+ }
+
+
 
 .text-one {
 margin-left: 40px;
