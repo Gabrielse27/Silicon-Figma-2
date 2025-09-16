@@ -26,6 +26,16 @@ body {
   
   padding: 0px;
 }
+.site-header {
+  position: sticky; top: 0;
+  background: #ffffff;
+  z-index: 50;
+}
+
+
+
+
+
 .header-grid {
     
   display: grid;
@@ -119,16 +129,11 @@ padding-top: 5rem;
 
 
         .hero-image {
-        margin-top: 50px;
+        margin-top: 100px;
           
        }
     }
 }
-
-  
-
-
- 
 
 .brands {
 
@@ -164,22 +169,6 @@ padding-top: 5rem;
     
      }
 
-/* Header */
-.site-header {
-    
-  position: sticky; top: 0;
-  background: #595353;
-
-  
-  z-index: 50;
-}
-
-
-
-/* Varje “logga/ikon” ska synas tydligt */
-.brand img { height: 28px; display: block; }
-
-
 .section-head h2 {
   font-size: 20px;
    display: block;  
@@ -188,7 +177,6 @@ padding-top: 5rem;
    text-align: right;
     margin-right: 282px;
     margin-top: 45px;
-
 }
 
 .section-head p {
@@ -201,9 +189,6 @@ padding-top: 5rem;
     color: #565973
 
 }
-
-
-   
 
 .easypayments {
 display: block;  
