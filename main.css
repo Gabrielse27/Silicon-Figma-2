@@ -58,17 +58,20 @@ body {
         gap: 200px;
         padding: 6px 10px;
         cursor: pointer;
-        width: 150px;
+        width: 90%;
       }
   
     }
 
     .signin-btn {
       display: grid;
-      width: 120px;
-      margin-right: 64px;
+      width: 80%;
+      margin-right: 30px;
     }
+  .silicon-btn {
 
+    width: 40%;
+  }
 
 
 .hero {
