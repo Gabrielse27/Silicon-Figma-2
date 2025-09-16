@@ -29,12 +29,8 @@ body {
 .site-header {
   position: sticky; top: 0;
   background: #ffffff;
-  z-index: 50;
+
 }
-
-
-
-
 
 .header-grid {
     
