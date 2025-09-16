@@ -33,20 +33,41 @@ body {
   align-items: center;
   height: 100px;
 }
+      .silicon-btn {
 
-.darkmode-btn {
+        display: grid;
+        align-items: center;
+        gap: 200px;
+        padding: 6px 10px;
+        cursor: pointer;
+        width: 50px;
+      
+      }
+
+.header-actions {
     
   display: grid;
-  grid-template-columns: 20px auto;
+  grid-auto-flow: column;   /* lägg barn i rad */
+  gap: 16px;
   align-items: center;
-  gap: 200px;
-  padding: 6px 10px;
-  cursor: pointer;
-  width: 150px;
-}
 
+       .darkmode-btn {
+    
+        display: grid;
+        align-items: center;
+        gap: 200px;
+        padding: 6px 10px;
+        cursor: pointer;
+        width: 150px;
+      }
+  
+    }
 
-
+    .signin-btn {
+      display: grid;
+      width: 120px;
+      margin-right: 64px;
+    }
 
 
 
@@ -107,6 +128,7 @@ padding-top: 5rem;
  
 
 .brands {
+
   background-color: #ffffff;
   height: auto;
   display: inline-block;
@@ -119,7 +141,9 @@ padding-top: 5rem;
   
 
    .logo {
+
    background-color: #ffffff;
+   padding-top: 80px;
    margin-top: -50px;
    border: 1px solid #fff;
   
@@ -141,7 +165,8 @@ padding-top: 5rem;
 .site-header {
     
   position: sticky; top: 0;
-  background: #fff;
+  background: #595353;
+
   
   z-index: 50;
 }
@@ -150,18 +175,6 @@ padding-top: 5rem;
 
 /* Varje “logga/ikon” ska synas tydligt */
 .brand img { height: 28px; display: block; }
-
-
-
-/* Höger kluster – använder grid (inte flex) */
-.header-actions {
-    
-  display: grid;
-  grid-auto-flow: column;   /* lägg barn i rad */
-  gap: 16px;
-  align-items: center;
-}
-
 
 
 .section-head h2 {
