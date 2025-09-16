@@ -6,26 +6,42 @@
 }
 
 :root {
+  --primary: #6366F1;
+
   --color-body-background: #FFFFFF;
-  --gray: #E5E5E5;
-  --brand: #0D99FF;
-  --system: #F24822;
-  
   --color-heading-text: #0B0F19;
-  --green:  #22C55E;
-  --gray:  #E2E5F1;
+  --color-body-text: #565973;
+
+  --color-button-background: var(--primary);
   --container: 1200px;
 }
+
 body {
+  font-size: 18px;
    font-family: "Manrope", sans-serif; 
    font-weight:400;
-  margin: 80px;
+   margin: 80px;
    color: #565973;
    color: var(--color-body-text);
    background-color: var(--color-body-background);
   
   padding: 0px;
 }
+
+h1,h2,h3,h4,h5,h5 {
+  color: var(--color-heading-text);
+}
+
+.container { 
+  max-width: 1328px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+    
+  }
+
+
 .site-header {
   position: sticky; top: 0;
   background: #ffffff;
@@ -374,7 +390,7 @@ display: block;
     display: block;   
      margin: 0 auto;       /* centrerar bilden */
     text-align: right;
-     margin-right: 500px;
+     margin-right: 530px;
      margin-top: 40px;
 }
 .tremobiler-text p {
@@ -382,7 +398,7 @@ display: block;
     display: block;   
      margin: 0 auto;       /* centrerar bilden */
     text-align: center;
-    margin-right: -70px;
+    margin-right: -20px;
      margin-top: 5px;
      color: #565973
 }
