@@ -577,6 +577,7 @@ display: block;        /* gör att margin fungerar */
   display: flex;
   height: 400px;
   justify-content: space-between;
+
   
   
 }
@@ -591,7 +592,10 @@ display: block;        /* gör att margin fungerar */
 }
 
 .testimonials-title {
-  margin-left: 50px;
+ margin-left: 100px;
+ margin-top: -60px;
+
+  
 
 }
 
@@ -600,7 +604,7 @@ display: block;        /* gör att margin fungerar */
   width: 320px;
   margin-top: -40px;
   display: grid;
-  margin-left: 100px;
+  margin-left: 0px;
   height: 258px;
 
 
@@ -614,7 +618,7 @@ margin-top: 55px;
 .quote {
   position: relative;
   display: grid;
-  margin-left: 100px;
+  margin-left: 1px;
 }
 .name {
   font-size: 13px;
@@ -663,7 +667,7 @@ margin-top: -25px;
  background: #ffffff;
   max-width: 90%;
   height: 260px;
- margin-right: 100px;
+ margin-right: 200px;
  margin-top: 10px;
  display: grid;
  width: 300px;
@@ -754,7 +758,7 @@ display: block;        /* gör att margin fungerar */
 
 }
 .site-footer {
-  background-color: #e5e5e5; /* ljusgrå bakgrund */
+  background-color: #ffffff; /* ljusgrå bakgrund */
   padding: 15px 20px;
   display: flex;
   justify-content: space-between; /* sprider ut vänster och mitten */
