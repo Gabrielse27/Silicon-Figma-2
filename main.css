@@ -586,7 +586,7 @@ display: block;        /* gör att margin fungerar */
   margin-top: -20px;
 }
 .testimonials-ingress {
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
 }
 
@@ -598,29 +598,39 @@ display: block;        /* gör att margin fungerar */
 .tcard {
   background: #ffffff;
   width: 320px;
-  margin-top: -30px;
+  margin-top: -40px;
   display: grid;
   margin-left: 100px;
-  height: 210px;
+  height: 258px;
 
 
 }
 
 .stars{
 color: #FFBA08;
-margin-top: 20px;
+margin-top: 55px;
 
 }
 .quote {
   position: relative;
+  display: grid;
   margin-left: 100px;
-  
-  
-  
-    
-
-
 }
+.name {
+  font-size: 13px;
+  margin-left: 30px;
+  line-height: 1.0px;
+  margin-top: -55px;
+}
+.role {
+  font-size: 10px;
+  margin-left: 60px;
+  
+}
+
+
+
+
 .testimonials-right {
   display: grid;
 align-items:center;
@@ -650,15 +660,33 @@ margin-top: -25px;
 
 
 .tcard-right{
- background: #987d7d;
+ background: #ffffff;
   max-width: 90%;
-  height: 200px;
+  height: 260px;
  margin-right: 100px;
  margin-top: 10px;
  display: grid;
  width: 300px;
+}
+.avatar-right {
+  width: 10px;
+}
+.meta-right {
+  grid-template-columns: auto 1fr;
+  
+
+.role-right {
+font-size: 10px;
+margin-left: 30px;
 
 }
+ .name-right{
+  font-size: 12px;
+  margin-left: 30px;
+  margin-top: -50px;
+  line-height: 1.0px;
+   }
+  }
 .text-one {
 margin-left: 40px;
 
