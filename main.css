@@ -560,8 +560,6 @@ display: block;        /* gör att margin fungerar */
   display: flow-root;   /* Skapar BFC */
   margin-block: 40px;   /* Luft mellan sektioner */
 }
-
-
 .container {
     width: 100%;
    max-width: 1320px;
@@ -572,38 +570,87 @@ display: block;        /* gör att margin fungerar */
 
 }
 
+
+
 .testimonials-area {
-display: flex;
+  background-color: #F3F6FF;
+  display: flex;
+  height: 400px;
   justify-content: space-between;
-}
-
-
-
-.actions-va {
   
-
-  .testimonials-va{
-
-  }
+}
+.testimonials-content {
+  display: flex;
+  align-items: center;
+}
+.testimonials-ingress {
+  font-size: 14px;
+  text-align: center;
 }
 
+.testimonials-title {
+  margin-left: 50px;
+}
+
+.tcard {
+  background: #ffffff;
+  width: 300px;
+  margin-top: -30px;
+  display: grid;
+  margin-left: 100px;
 
 
+}
 
+.stars{
+color: #FFBA08;
+margin-top: 10px;
 
-  .actions-ho {
+}
+.quote {
+  margin-left: 100px;
+  
     
 
-    .testimonials-va {
+
+}
+.testimonials-right {
+  display: grid;
+align-items:center;
+justify-content: space-between;
+
+}
+.testimonials-text-right {
+  font-size: 12px;
+   text-align: center;
+   margin-top: 5px;
+
+}
+
+.quote-right {
+  position: relative;
+margin-top: -25px;
 
 
-    }
+
+}
+.stars-right {
+  color: #FFBA08;
+margin-top: -20px;
+}
 
 
- }
 
+.tcard-right{
+ background: #987d7d;
+  max-width: 90%;
+  height: 200px;
+ margin-right: 100px;
+ margin-top: 10px;
+ display: grid;
+ width: 300px;
 
-
+}
 .text-one {
 margin-left: 40px;
 
