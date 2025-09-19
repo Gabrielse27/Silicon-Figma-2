@@ -578,10 +578,12 @@ display: block;        /* gör att margin fungerar */
   height: 400px;
   justify-content: space-between;
   
+  
 }
 .testimonials-content {
   display: flex;
   align-items: center;
+  margin-top: -20px;
 }
 .testimonials-ingress {
   font-size: 14px;
@@ -590,25 +592,30 @@ display: block;        /* gör att margin fungerar */
 
 .testimonials-title {
   margin-left: 50px;
+
 }
 
 .tcard {
   background: #ffffff;
-  width: 300px;
+  width: 320px;
   margin-top: -30px;
   display: grid;
   margin-left: 100px;
+  height: 210px;
 
 
 }
 
 .stars{
 color: #FFBA08;
-margin-top: 10px;
+margin-top: 20px;
 
 }
 .quote {
+  position: relative;
   margin-left: 100px;
+  
+  
   
     
 
@@ -636,7 +643,8 @@ margin-top: -25px;
 }
 .stars-right {
   color: #FFBA08;
-margin-top: -20px;
+
+
 }
 
 
