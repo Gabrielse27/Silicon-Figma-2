@@ -600,14 +600,13 @@ display: block;        /* gör att margin fungerar */
 }
 
 .tcard {
-  background: #ffffff;
-  width: 320px;
-  margin-top: -40px;
-  display: grid;
-  margin-left: 0px;
-  height: 258px;
-
-
+background: #fff;
+width: 320px;
+margin-top: -40px;
+display: grid;
+margin-left: 0;
+height: 258px;
+border-radius: 10px;
 }
 
 .stars{
@@ -616,12 +615,16 @@ margin-top: 55px;
 
 }
 .quote {
-  position: relative;
+ position: relative;
   display: grid;
   margin-left: 1px;
+
+  @media (min-width: 900px){
+  .quote{ width: 28px; height: 28px; top: -12px; }
+   }
 }
 .name {
-  font-size: 13px;
+  font-size: 12px;
   margin-left: 30px;
   line-height: 1.0px;
   margin-top: -55px;
@@ -631,9 +634,6 @@ margin-top: 55px;
   margin-left: 60px;
   
 }
-
-
-
 
 .testimonials-right {
   display: grid;
@@ -661,8 +661,6 @@ margin-top: -25px;
 
 }
 
-
-
 .tcard-right{
  background: #ffffff;
   max-width: 90%;
@@ -671,6 +669,7 @@ margin-top: -25px;
  margin-top: 10px;
  display: grid;
  width: 300px;
+ border-radius: 10px;
 }
 .avatar-right {
   width: 10px;
