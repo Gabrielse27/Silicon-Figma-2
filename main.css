@@ -691,7 +691,91 @@ margin-left: 30px;
    }
   }
 
+.faq {
+  margin-top: 100px;
+  padding-bottom: 5rem;
+
+    @media (width >= 768px) {
+        padding-bottom: 0;
+    }
+
+    .faq-area {
+       display: grid;
+       
+
+      .faq-content {
+        display: grid;
+        gap: 2rem;
+       
+        
+         
+
+        .faq-title{
+           font-size: 32px;
+           font-weight: 600;
+           margin-top: 10px;
+
+        }
+      }
+      
+      .faq-ingress {
+      font-size: 12px;
+      margin-top: -20px;
+
+      }
+    }
+  }
+.telefon-contact {
+  display: grid;
+  margin-bottom: -32px;
+
+}
+.contact-card-area {
+display: flex;
+
+
+
+}
+.message-contact-area {
+
+  margin-left: 230px;
+  margin-top: -100px;
+border: 1px solid #d5d7e9;
+height: 166px;
+border-radius: 10px;
+width: 200px;
+
   
+    
+  .message-contact{
+    margin-top: -10px;
+    margin-left: 20px;
+    margin-top: 20px;
+
+  }
+  .faq-message-p {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    
+
+  }
+  .contact-us {
+    text-align: center;
+    margin-top: 5px;
+  }
+
+
+
+
+}
+
+
+
+
+
+
+
 
 
 
