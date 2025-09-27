@@ -5,6 +5,7 @@
   grid-template-rows: auto 1fr auto;
 }
 
+
 :root {
   --primary: #6366F1;
 
@@ -14,7 +15,10 @@
 
   --color-button-background: var(--primary);
   --container: 1200px;
+  --card-radius: 12px;  
 }
+
+
 
 body {
   font-size: 18px;
@@ -691,83 +695,38 @@ margin-left: 30px;
    }
   }
 
+
 .faq {
-  margin-top: 100px;
-  padding-bottom: 5rem;
 
-    @media (width >= 768px) {
-        padding-bottom: 0;
-    }
-
-    .faq-area {
-       display: grid;
-       
-
-      .faq-content {
-        display: grid;
-        gap: 2rem;
-       
-        
-         
-
-        .faq-title{
-           font-size: 32px;
-           font-weight: 600;
-           margin-top: 10px;
-
-        }
-      }
-      
-      .faq-ingress {
-      font-size: 12px;
-      margin-top: -20px;
-
-      }
-    }
-  }
-.telefon-contact {
-  display: grid;
-  margin-bottom: -32px;
-
-}
-.contact-card-area {
-display: flex;
-
-
-
-}
-.message-contact-area {
-
-  margin-left: 230px;
-  margin-top: -100px;
-border: 1px solid #d5d7e9;
-height: 166px;
-border-radius: 10px;
-width: 200px;
+ 
+.container {
+  display: flex;
+  justify-content: space-between;
 
   
-    
-  .message-contact{
-    margin-top: -10px;
-    margin-left: 20px;
-    margin-top: 20px;
-
-  }
-  .faq-message-p {
-    font-size: 14px;
-    text-align: center;
-    margin-top: 10px;
-    
-
-  }
-  .contact-us {
-    text-align: center;
-    margin-top: 5px;
-  }
+  
+  
+  
+}
+ 
+.faq-area {
+ display: flex;
+ margin-top: 5rem;
+ margin-bottom: 10rem;
+ 
+ justify-content: space-between;
+ 
+ 
 
 
 
+}
 
+}
+.faq-title {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 100px;
 }
 
 
@@ -775,17 +734,118 @@ width: 200px;
 
 
 
+.faq-accordion {
+  
+  flex-direction:column;
+   max-width: 500px;
+   margin-left: 500px;
+   overflow-anchor: none;
+   
+   
+   
+  
+  
+}
+
+.faq-accordion .contentBx {
+  position: relative;
+  margin: 10px 20px;
+  box-shadow: 0 2px 8px;
+  font-size: 12px;
+  overflow-anchor: none;
+  gap: 10rem;  
+ 
+}
+.faq-accordion {
+  justify-content: space-between;
+  margin-left: 23rem;
+}
+.contentBx {
+  
+ width: 500px;
+  border-radius: .5rem;
+  overflow: hidden;
+  margin-bottom:  5rem;
+}
+.label {
+  
+  color: #0B0F19;
+  font-size: 14px;
+  font-weight: 600;
+}
 
 
+.faq-accordion .contentBx .label {
+  display: flex;
+  position: relative;
+  padding: 5px;
+  background:#fff;
+  color: #0b0b0b;
+  cursor: pointer;
 
+  justify-content: space-between;
+}
+.acc-btn {
+  border-radius: 100%;
+  height: 28px;
+  transform:rotate(360deg);
+  background-color: #eeeff3;
+  border: 0;
+}
+  
 
+.chev-btn {
+  display: flex;
+  
+  
+  margin-left: auto;
+  margin-top: 1rem;
+  
+  
 
+  
+  
+}
 
+.faq-accordion .contentBx .label::before
+{
+  
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translate(-50%);
+  font-size: 1.5em;
+  border-radius: 10px;
+  
+  
+  
+  
 
+}
+.faq-accordion .contentBx .content {
+  position: relative;
+  padding: 0px 16px;
+  background: #f0eeee;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.5s;
+  border-radius: 10px;
+  
+  
+  
+  
 
+  
+}
+.faq-accordion .contentBx.active .content {
+    height: 50px;
+    padding: 10px;
+    justify-content: space-between;
+    display: flex;
+    
 
-
-
+    
+}
 
 
 
@@ -844,6 +904,7 @@ display: block;        /* gör att margin fungerar */
     margin-bottom: 0px;
 }
 .subscribe {
+  
   background: #f5f8ff;      /* ljusblå bakgrund */
   padding: 40px 20px;       /* luft inuti bakgrunden */
   border-radius: 10px;      /* rundade hörn */
