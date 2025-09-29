@@ -4,22 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+  (function(){
+    try {
+      var saved = localStorage.getItem('theme');
+      var mode = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', mode);
+    } catch(e){}
+  })();
+</script>
+
     <link rel="stylesheet" href="main.css">
+   <script src="darkmode.js" defer></script>
+    
 </head>
 <body>
 
     <header class="site-header">       
-  <div class="header-grid">
+  <div class="header-area">
     <!-- Vänster: Silicon logga -->
 
     <div class="silicon-btn"> 
-      <img src="Images/silicon-btn2.svg" alt="" class="silicon-btn">
+      <img src="images/silicon-btn2.svg" alt="" class="silicon-btn">
     </div>
 
     <!-- Höger: Dark mode + Sign in -->
     <div class="header-actions">
       
-        <img src="Images/dark-mode.svg" alt="Darkmode" class="darkmode-btn"/>
+        <label class="theme-toggle">
+       <span>Dark Mode</span>
+      <input id="theme-toggle" type="checkbox" aria-label="darkmode-btn">
+     <span class="switch" aria-hidden="true"></span>
+   </label>
         
     
   

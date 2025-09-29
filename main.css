@@ -16,9 +16,13 @@
   --color-button-background: var(--primary);
   --container: 1200px;
   --card-radius: 12px;  
+
+   
+    }
+:root[data-theme="dark"] {
+  --color-body-background: #0B0F19;
+  --color-body-text: #E8EDF2;
 }
-
-
 
 body {
   font-size: 18px;
@@ -30,6 +34,10 @@ body {
    background-color: var(--color-body-background);
   
   padding: 0px;
+
+  padding: 25px;
+  
+  font-size: 20px;
 }
 
 h1,h2,h3,h4,h5,h5 {
@@ -67,7 +75,7 @@ h1,h2,h3,h4,h5,h5 {
 
 }
 
-.header-grid {
+.header-area {
     
   display: grid;
   grid-template-columns: 1fr auto; /* brand vänster, actions höger */
@@ -94,13 +102,9 @@ h1,h2,h3,h4,h5,h5 {
   align-items: center;
 }
        .darkmode-btn {
-    
-        display: grid;
-        align-items: center;
-        gap: 200px;
-        padding: 6px 10px;
-        cursor: pointer;
-        width: 90%;
+       background-color: black;
+       color: white;
+        
       }
   
     
@@ -1031,7 +1035,7 @@ display: block;        /* gör att margin fungerar */
 
 /* Responsiv: på små skärmar, lite mindre avstånd */
 @media (max-width: 480px){
-  .header-grid { height: 56px; }
+  .header-area { height: 56px; }
   .header-actions { gap: 10px; }
   .brand img { height: 24px; }
   .signin-btn img { height: 26px; }
