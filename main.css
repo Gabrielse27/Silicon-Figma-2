@@ -21,8 +21,43 @@
     }
 :root[data-theme="dark"] {
   --color-body-background: #0B0F19;
-  --color-body-text: #E8EDF2;
+  --color-body-text: #ffffff;
+  --color-heading-text: #ffffff;
 }
+
+
+[data-theme="dark"] .how-does-it-work  { background-color:#010b15; }
+[data-theme="dark"] .brands { background:#010b15; }
+[data-theme="dark"]  .tcard { background-color:#070707; }
+[data-theme="dark"] .testimonials-area  { background-color:#010b15; }
+
+[data-theme="dark"] .tcard-right { background-color:#070707; }
+[data-theme="dark"] .input { background-color:#070707; }
+
+[data-theme="dark"] .subscribe  { background-color:#010b15; }
+[data-theme="dark"] .site-footer { background-color:#010b15; }
+
+:root[data-theme="dark"] .faq-accordion .contentBx{
+  background: #0B0F19;
+  box-shadow: 0 12px 30px rgba(0,0,0,.5);
+}
+
+:root[data-theme="dark"] .faq-accordion .contentBx .label{
+  background: #0B0F19;
+  color: #E8EDF2;
+}
+
+:root[data-theme="dark"] .faq-accordion .contentBx .content{
+  background: #00030b;
+  color: #C7D3EA;
+}
+
+:root[data-theme="dark"] .acc-btn{
+  background: #121827;
+  border-color: #1c1d1f;
+}
+
+:root[data-theme="dark"] .acc-btn svg path{ fill:#E8EDF2; }
 
 body {
   font-size: 18px;
@@ -37,7 +72,7 @@ body {
 
   padding: 25px;
   
-  font-size: 20px;
+  font-size: 18px;
 }
 
 h1,h2,h3,h4,h5,h5 {
@@ -185,7 +220,6 @@ padding-top: 5rem;
 
 .brands {
 
-  background-color: #ffffff;
   height: auto;
   display: inline-block;
   height: 10px;
@@ -198,12 +232,8 @@ padding-top: 5rem;
    padding-top: 80px;
    margin-top: -100px;
    border: 1px solid #fff;
-   
-  
-  
+      }
     }
-
-  }
 
 .section-head h2 {
   font-size: 40px;
@@ -782,6 +812,7 @@ display: flex;
   max-width: min(560px, 100%);
   padding: 2rem;
   
+  
 }
 .contentBx {
   
@@ -789,6 +820,7 @@ display: flex;
   border-radius: .5rem;
   overflow: hidden;
   margin-bottom:  5rem;
+
   
 }
 .label {
