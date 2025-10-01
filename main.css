@@ -44,7 +44,7 @@
 
 [data-theme="dark"] .subscribe  { background-color:#010b15; }
 
-:root[data-theme="dark"] .site-footer  { 
+:root[data-theme="dark"] .footer  { 
   background:#010b15;
   color: #fff;
 
@@ -57,12 +57,12 @@
 
 :root[data-theme="dark"] .faq-accordion .contentBx .label{
   background: #0B0F19;
-  color: #E8EDF2;
+  color: #ffffff;
 }
 
 :root[data-theme="dark"] .faq-accordion .contentBx .content{
   background: #00030b;
-  color: #C7D3EA;
+  color: #f3f1f1;
 }
 
 :root[data-theme="dark"] .acc-btn{
@@ -1038,8 +1038,8 @@ flex: 1;                   /* Gör så fältet tar all plats till vänster */
   font-size: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-top: -20px;
-  top: -10px;
+  
+  
   width: 290px;
 
 }
@@ -1068,8 +1068,17 @@ display: block;        /* gör att margin fungerar */
     margin-bottom: 0px;
 }
 
-.kuver-icon {
-margin-bottom: -.4rem;
+.input-wrap {
+position: relative;
+  display: inline-flex;
+  align-items: stretch;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  
+}
+.input-icon {
+
   
 }
 .subscribe {
