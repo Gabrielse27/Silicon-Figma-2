@@ -16,9 +16,8 @@
 
     <link rel="stylesheet" href="main.css">
    <script src="darkmode.js" defer></script>
-    
-</head>
-<body>
+   </head>
+  <body>
 
     <header class="site-header">       
   <div class="header-area">
@@ -63,13 +62,25 @@
 
      <div class="app-download-buttons">
 
-    <a href="https://apps.apple.com/se/app" class="btn-download">
-  <img src="appstore.svg" alt="Download att the App Store">
+    <a href="https://apps.apple.com/se/app" class="store-badge">
+    <img class="badge badge--light" src="images/badges/appstore-light.svg"
+         alt="Download on the App Store">
+    <img class="badge badge--dark"  src="images/badges/appstore-dark.svg"
+         alt="Download on the App Store">
   </a>
 
-  <a href="https://play.google.com/store/apps" class="btn-download">
-    <img src="googleplay.svg" alt="Get On Google Play">
-      </a>
+
+    <a href="https://play.google.com/store/apps" class="store-badge">
+    <img class="badge badge--light" src="images/badges/googleplay-light.svg"
+         alt="Get it on Google Play">
+    <img class="badge badge--dark"  src="images/badges/googleplay-dark.svg"
+         alt="Get it on Google Play">
+  </a>
+
+
+
+
+  
         </div>
           </div>
 
@@ -87,8 +98,15 @@
 
     <section id="brands" class="brands">
        <div class="logo">
-        <img src="images/sixlogo.svg" alt="brand logos" class="brands-img brands-img--light"> 
-        
+
+        <img src="images/badges/sixlogo-light.svg" alt="Partner brands" class="brands brands-img--light">
+      
+      
+
+    <!-- Mörk variant (visas i dark mode) -->
+    <img src="images/badges/sixlogo-dark.svg" alt="" aria-hidden="true" class="brands brands-img--dark">
+      
+    
        </div>
       
      </section>
