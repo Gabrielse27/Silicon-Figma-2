@@ -512,6 +512,7 @@ display: block;
    text-align: right;
     margin-right: 50px;
     margin-top: -260px;
+    width: 350px;
 }
 .split-text h2 {
     font-size: 32px;
@@ -536,7 +537,7 @@ display: block;
     text-align:left;
      margin-left: 0px;
      margin-top: -78px;
-
+     width: 19px;
 }
 .blue-icon__b {
  display: block;   
@@ -544,6 +545,7 @@ display: block;
     text-align:left;
      margin-left: 0px;
      margin-top:3px;
+     width: 19px;
 }
 .blue-icon__c {
     display: block;   
@@ -551,6 +553,7 @@ display: block;
     text-align:left;
      margin-left: 0px;
      margin-top: 2px;
+     width: 19px;
 
 }
 
@@ -563,7 +566,7 @@ display: block;
    text-align: left;
     margin-left: 1px;
     margin-top: 50px;
-    
+    width: 120px;
 }
 
 
@@ -629,6 +632,7 @@ display: block;
     text-align: left;
     margin-right: 164px;
     margin-top: 30px;
+    width: 120px;
 
 }
 .contact-visa {
@@ -1028,6 +1032,7 @@ width: 190px;
     margin-right: -28px;
     margin-top: -33px;
     margin-bottom: 0px;
+    width: 90px;
 }
 
 
@@ -1048,7 +1053,7 @@ flex: 1;                   /* Gör så fältet tar all plats till vänster */
   font-size: 10px;       /* gör att margin fungerar */
     margin: 0 auto;       /* centrerar bilden */
    text-align: right;
-    margin-right: 160px;
+    margin-right: 190px;
     margin-top: -60px;
     margin-bottom: 0px; 
 }
@@ -1066,6 +1071,7 @@ display: block;        /* gör att margin fungerar */
     margin-left: 60px;
     margin-top: 10px;
     margin-bottom: 0px;
+    width: 30px;
 }
 
 .input-wrap {
@@ -1080,11 +1086,17 @@ position: relative;
 .input-icon {
 
   
+
+                         
+  
+  
+
+  
 }
 .subscribe {
   
   background: #f5f8ff;      /* ljusblå bakgrund */
-  padding: 40px 20px;       /* luft inuti bakgrunden */
+  padding: 40px 20px;    /* luft inuti bakgrunden */
   border-radius: 10px;      /* rundade hörn */
   margin: 40px auto;        /* flytta ner rutan på sidan */
   max-width: 1000px; 
