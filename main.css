@@ -8,6 +8,7 @@
 }
 
 
+
 :root {
   --primary: #6366F1;
 
@@ -267,11 +268,6 @@ h1,h2,h3,h4,h5,h5 {
 }
 
 
-
-
-
-
-
     
 .hero {
    background: #FFFFFF;
@@ -284,10 +280,6 @@ h1,h2,h3,h4,h5,h5 {
     gap: 3rem;
     text-align: center;
 
-    @media (min-width >= 768px) {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-      text-align: left;}
     
      
     
@@ -320,15 +312,17 @@ h1,h2,h3,h4,h5,h5 {
         }
          
        }
-
+      
 
         .hero-image {
         margin-top: 100px;
           
           }
        }
-     }
-     
+      }
+ 
+    
+
 .btn-download {
         text-decoration: none;
         display: inline-block;
@@ -786,9 +780,7 @@ margin-top: 55px;
   display: grid;
   margin-left: 1px;
 
-  @media (min-width: 900px){
-  .quote{ width: 28px; height: 28px; top: -12px; }
-   }
+  
 }
 .name {
   font-size: 12px;
@@ -853,11 +845,6 @@ margin-left: 30px;
   line-height: 1.0px;
    }
   }
-
-
-
-
-  @media (width >= 768px) {
 
 .faq {
                                 
@@ -963,11 +950,7 @@ margin-left: 30px;
   
   margin-left: auto;
   margin-top: 1rem;
-  
-  
-
-  
-  
+   
 }
 
 .faq-accordion .contentBx .label::before
@@ -988,13 +971,7 @@ margin-left: 30px;
   height: 0px;
   overflow: hidden;
   transition: 0.5s;
-  border-radius: 10px;
-  
-  
-  
-  
-
-  
+  border-radius: 10px; 
 }
 .faq-accordion .contentBx.active .content {
     height: 60px;
@@ -1004,12 +981,6 @@ margin-left: 30px;
             
 }
   
-  
-
-
-    @media (width >= 768px) {
-        padding-bottom: 0;
-    }
 
     .faq-area {
        display: flex;
@@ -1044,10 +1015,8 @@ margin-left: 30px;
     }
   }
 
-}
 
 
-@media (width >= 768px) {
 
 .telefon-contact {
   display: grid;
@@ -1091,7 +1060,7 @@ margin-top: 3.5rem;
     }
    }
   
-  }
+  
 .section--isolated {
   display: flow-root;   /* Skapar BFC */
   margin-block: 100px;   /* Luft mellan sektioner */
@@ -1160,7 +1129,6 @@ h6.subscribe-text   {
   height: 40px;
 
 }
-@media (width >= 768px) {
 
 .footer {
   background-color: #ffffff; /* ljusgrå bakgrund */
@@ -1177,32 +1145,48 @@ h6.subscribe-text   {
     flex-grow: 1; /* gör att den centreras fint */
     color: #575252; }
 
+
+
+
+.page {
+    max-width: 576px;
+    width: 100%;
+    margin: auto;
+    padding: 0 1rem;
+}
+@media (min-width: 425px) {
+  .page {
+    
+  }
+}
+@media (min-width: 600px) {
+  .page {
+    max-width: 1170px;
+  }
 }
 
-@media (max-width: 480px){
-  .header-area { height: 56px; }
-  .header-actions { gap: 10px; }
-  .brand-img { height: 24px; }
-  .signin-btn-img { height: 26px; }
+@media (min-width: 768px) {
+    .page {
+        max-width: 1170px;
+        padding: 0 0.5rem;
+    }
 }
 
-.container{
-  width: min(100% - 2rem, 1320px);
-  margin-inline: auto;
-  padding-inline: 0;
-
-
-@media (min-width: 480px) {.container{ max-width: 678px}}
-
-
-@media (width >= 768px) {
-
- } 
-
-@media (min-width: 992px){ .container{ max-width: 960px } }
-@media (min-width: 1200px){ .container{ max-width: 1140px } }
-@media (min-width: 1400px){ .container{ max-width: 1320px } }
+@media (min-width: 992px) {
+    .page {
+      max-width: 1200px;
+    }
 }
+ 
+@media (min-width: 1200px) {
+    .page {
+        max-width: 1400px;
+        padding: 0 2rem; 
+    }
+}
+
+
+
 
 img, svg {
   max-width: 100%; 
