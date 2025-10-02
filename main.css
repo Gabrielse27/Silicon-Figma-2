@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 .page {
   height: 100dvh;
   display: grid;
@@ -40,7 +42,11 @@
 [data-theme="dark"] .testimonials-area  { background-color:#010b15; }
 
 [data-theme="dark"] .tcard-right { background-color:#070707; }
-[data-theme="dark"] .input { background-color:#070707; }
+[data-theme="dark"] .email-input { 
+  background-color:#070707;
+  color: #ffffff;
+}
+
 
 [data-theme="dark"] .subscribe  { background-color:#010b15; }
 
@@ -74,7 +80,7 @@
 :root[data-theme="dark"] .acc-btn svg path{ fill:#E8EDF2; }
 
 :root[data-theme="dark"] .brands .logo {
-  background-image: url("images/sixlogo-dark.svg");
+  background-image: url("images/badges/sixlogo-dark.svg");
   
 }
 
@@ -102,29 +108,6 @@ h1,h2,h3,h4,h5,h5 {
   color: var(--color-heading-text);
 }
 
-.container { 
-  max-width: 1328px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 1rem;
-  padding-left: 1rem;
-    
-  @media (width > 768px) {
-    max-width: 720px;
-  }
-
-  @media(width > 992px) {
-    max-width: 960px;
-  }
-
-  @media(width > 1200px) {
-    max-width: 1140px;
-  }
-
-  @media(width > 1400px) {
-    max-width: 1320px;
-  }
-     }
 
 
 .site-header {
@@ -148,9 +131,27 @@ h1,h2,h3,h4,h5,h5 {
   gap: 200px;
   padding: 6px 10px;
   cursor: pointer;
-  width: 50px;
-      
-      }
+  width: 40%;    
+  }
+.store-badges { display:inline-flex; line-height:0; }
+
+.store-badges .badges { height:56px; display:block; }
+
+
+/* växla med ditt data-theme */
+.badges--dark { display:none; }
+:root[data-theme="dark"] .badges--light { display:none; }
+:root[data-theme="dark"] .badges--dark  { display:block; }
+
+
+.badges--light { display:none; }
+:root[data-theme="light"] .badges--dark { display:none; }
+:root[data-theme="light"] .badges--light  { display:block; }
+
+
+
+
+
 
 .header-actions {
     
@@ -171,13 +172,7 @@ h1,h2,h3,h4,h5,h5 {
       display: grid;
       width: 80%;
       margin-right: 30px;
-    }
-.silicon-btn {
-
-    width: 40%;
-  }
-
-
+}
 
 .app-download-buttons {  
   display:flex;
@@ -203,10 +198,81 @@ h1,h2,h3,h4,h5,h5 {
 :root[data-theme="light"] .badge--light  { display:block; }
 
 
+/* Wrapper: text + switch i rad */
+.theme-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap:.75rem;
+  cursor:pointer;
+  user-select:none;
+}
+
+/* Dölj den ”riktiga” checkboxen (men behåll den tillgänglig) */
+.theme-toggle input{
+  position:absolute;
+  inline-size:1px;
+  block-size:1px;
+  margin:-1px;
+  padding:0;
+  border:0;
+  clip:rect(0 0 0 0);
+  clip-path:inset(50%);
+  overflow:hidden;
+}
+
+/* Själva skenan/pillen */
+.theme-toggle .switch{
+  inline-size:48px;        /* bredd */
+  block-size:28px;         /* höjd  */
+  border-radius:999px;
+  background:#9aa0b3;      /* grå sken */
+  position:relative;
+  transition:background .2s ease;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.15);
+}
+
+/* Runda ”knoppen” */
+.theme-toggle .switch::before{
+  content:"";
+  position:absolute;
+  inset:3px auto auto 3px; /* top/right/bottom/left */
+  inline-size:22px;
+  block-size:22px;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:0 1px 2px rgba(0,0,0,.25);
+  transition:transform .2s ease;
+}
+
+/* Aktivt läge (ibockad) */
+#theme-toggle:checked + .switch{
+  background:#6366F1;                  /* lila när på */
+}
+#theme-toggle:checked + .switch::before{
+  transform:translateX(20px);          /* flytta knoppen */
+}
+
+/* Focus-stil för tangentbord */
+.theme-toggle input:focus-visible + .switch{
+  outline:2px solid #6366F1;
+  outline-offset:3px;
+}
+
+/* (valfritt) anpassa i dark theme om du vill */
+:root[data-theme="dark"] .theme-toggle .switch{
+  background:#4b5563;
+}
+:root[data-theme="dark"] #theme-toggle:checked + .switch{
+  background:#6366F1;
+}
 
 
 
 
+
+
+
+    
 .hero {
    background: #FFFFFF;
    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(99, 102, 241, 0.07) 83%);
@@ -217,15 +283,14 @@ h1,h2,h3,h4,h5,h5 {
     justify-content: space-between;
     gap: 3rem;
     text-align: center;
-    
-    
-     
+
     @media (min-width >= 768px) {
       grid-template-columns: 1fr;
       gap: 3rem;
-      text-align: left;
+      text-align: left;}
     
-    }
+     
+    
 
        .hero-content {
         flex-direction: column;
@@ -260,10 +325,10 @@ h1,h2,h3,h4,h5,h5 {
         .hero-image {
         margin-top: 100px;
           
+          }
        }
-    }
-  }
-
+     }
+     
 .btn-download {
         text-decoration: none;
         display: inline-block;
@@ -273,8 +338,6 @@ h1,h2,h3,h4,h5,h5 {
         text-align: center;
         
     }
-
-
 
 
     .brands .brands-img--light { display: inline-block;
@@ -314,9 +377,12 @@ h1,h2,h3,h4,h5,h5 {
     text-align: right;
     margin-right: 1.7rem;
     margin-top: 40px;
-    color: #565973
+    color: #9397AD;
 
 }
+:root[data-theme="dark"] .section-features p{
+  background: #0B0F19;
+  color: #f3f1f1;}
 
 .easypayments {
     display: block;  
@@ -484,8 +550,6 @@ h1,h2,h3,h4,h5,h5 {
   margin-block: 40px;   /* Luft mellan sektioner */
 }
 
-
-
 .tremobiler {
 
     display: block;        /* gör att margin fungerar */
@@ -586,9 +650,6 @@ h1,h2,h3,h4,h5,h5 {
 
 }
 
-
-     
-
 .learn-more-btn {
     display: block;        /* gör att margin fungerar */
     margin: 0 auto;       /* centrerar bilden */
@@ -597,7 +658,6 @@ h1,h2,h3,h4,h5,h5 {
     margin-top: 50px;
     width: 120px;
 }
-
 
 .learn-more-btn-b{
     display: block;        /* gör att margin fungerar */
@@ -608,8 +668,6 @@ h1,h2,h3,h4,h5,h5 {
     margin-bottom: 0px;
 
 }
-
-  
 .section--isolated {
   display: flow-root;   /* Skapar BFC */
   margin-block: 40px;   /* Luft mellan sektioner */
@@ -685,16 +743,12 @@ h1,h2,h3,h4,h5,h5 {
 
 }
 
-
-
 .testimonials-area {
   background-color: #F3F6FF;
   display: flex;
   height: 400px;
   justify-content: space-between;
-
-  
-  
+ 
 }
 .testimonials-content {
   display: flex;
@@ -709,9 +763,6 @@ h1,h2,h3,h4,h5,h5 {
 .testimonials-title {
  margin-left: 100px;
  margin-top: -60px;
-
-  
-
 }
 
 .tcard {
@@ -729,6 +780,7 @@ color: #FFBA08;
 margin-top: 55px;
 
 }
+
 .quote {
   position: relative;
   display: grid;
@@ -746,8 +798,7 @@ margin-top: 55px;
 }
 .role {
   font-size: 10px;
-  margin-left: 60px;
-  
+  margin-left: 60px;  
 }
 
 .testimonials-right {
@@ -767,12 +818,9 @@ margin-top: 55px;
   position: relative;
   margin-top: -25px;
 
-
-
 }
 .stars-right {
   color: #FFBA08;
-
 
 }
 
@@ -807,6 +855,10 @@ margin-left: 30px;
   }
 
 
+
+
+  @media (width >= 768px) {
+
 .faq {
                                 
   margin-top: 5rem;   
@@ -827,14 +879,9 @@ margin-left: 30px;
  margin-bottom: 10rem;
  align-items: flex-start;
  justify-content: space-between;
- 
- 
-
-
-
-}
-
-
+        }
+      
+    
 .faq-title {
   font-size: 20px;
   margin-top: 0;
@@ -849,10 +896,6 @@ margin-left: 30px;
    overflow-anchor: none;
    margin-top: 6rem;
    
-   
-   
-  
-  
 }
 
 .faq-accordion .contentBx {
@@ -996,10 +1039,16 @@ margin-left: 30px;
       margin-bottom: 1rem;
       margin-top: -5rem;
     
-
+      
       }
     }
   }
+
+}
+
+
+@media (width >= 768px) {
+
 .telefon-contact {
   display: grid;
   margin-bottom: -32px;
@@ -1042,12 +1091,7 @@ margin-top: 3.5rem;
     }
    }
   
-
-
-
-
-
-
+  }
 .section--isolated {
   display: flow-root;   /* Skapar BFC */
   margin-block: 100px;   /* Luft mellan sektioner */
@@ -1064,18 +1108,6 @@ margin-top: 3.5rem;
 }
 
 
-/* Inputfältet */
-.input {
-  flex: 1;                   /* Gör så fältet tar all plats till vänster */
-  padding: 10px;
-  font-size: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  
-  
-  width: 290px;
-
-}
 .subscribe-form {
     display: block; 
     font-size: 10px;       /* gör att margin fungerar */
@@ -1102,25 +1134,22 @@ h6.subscribe-text   {
     width: 30px;
 }
 
-.input-wrap {
-  position: relative;
-  display: inline-flex;
-  align-items: stretch;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,.06);
-  
+
+ 
+.email-input {
+  background-image: url('images/icon-email.svg');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 15px 15px;
+  padding-left: 30px; /* Flyttar texten så den inte täcker ikonen */
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 10px;
+  width: 30%;
 }
-.input-icon {
 
-  
 
-                         
-  
-  
-
-  
-}
 .subscribe {
   
   background: #f5f8ff;      /* ljusblå bakgrund */
@@ -1131,6 +1160,8 @@ h6.subscribe-text   {
   height: 40px;
 
 }
+@media (width >= 768px) {
+
 .footer {
   background-color: #ffffff; /* ljusgrå bakgrund */
   padding: 15px 20px;
@@ -1144,27 +1175,34 @@ h6.subscribe-text   {
     font-size: 10px;
     text-align: center;
     flex-grow: 1; /* gör att den centreras fint */
-    color: #575252; 
+    color: #575252; }
+
 }
 
 @media (max-width: 480px){
   .header-area { height: 56px; }
   .header-actions { gap: 10px; }
-  .brand img { height: 24px; }
-  .signin-btn img { height: 26px; }
+  .brand-img { height: 24px; }
+  .signin-btn-img { height: 26px; }
 }
 
 .container{
   width: min(100% - 2rem, 1320px);
   margin-inline: auto;
-  padding-inline: 0; /* vi använder 2rem via width-raden ovan */
-}
+  padding-inline: 0;
 
-@media (min-width: 768px){ .container{ max-width: 720px } }
+
+@media (min-width: 480px) {.container{ max-width: 678px}}
+
+
+@media (width >= 768px) {
+
+ } 
+
 @media (min-width: 992px){ .container{ max-width: 960px } }
 @media (min-width: 1200px){ .container{ max-width: 1140px } }
 @media (min-width: 1400px){ .container{ max-width: 1320px } }
-
+}
 
 img, svg {
   max-width: 100%; 
