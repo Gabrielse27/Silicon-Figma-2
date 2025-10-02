@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 .page {
   height: 100dvh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+
 
 
 :root {
@@ -25,7 +28,7 @@
   --color-heading-text: #ffffff;
 }
 
-[data-theme="dark"] .site-header  { background-color:#010b15; }
+[data-theme="dark"] .site-header  { background-color:#0B0F19; }
 
 
 :root[data-theme="dark"] .hero  {
@@ -40,15 +43,20 @@
 [data-theme="dark"] .testimonials-area  { background-color:#010b15; }
 
 [data-theme="dark"] .tcard-right { background-color:#070707; }
-[data-theme="dark"] .input { background-color:#070707; }
+[data-theme="dark"] .email-input { 
+  background-color:#070707;
+  color: #ffffff;
+}
+
 
 [data-theme="dark"] .subscribe  { background-color:#010b15; }
 
-:root[data-theme="dark"] .site-footer  { 
-  background:#010b15;
-  color: #fff;
-
+:root[data-theme="dark"] .footer { 
+  background:#0B0F19;
+  color: #ffffff;
 }
+:root[data-theme="dark"] .footer-center {
+  color: #ffffff;}
 
 :root[data-theme="dark"] .faq-accordion .contentBx{
   background: #0B0F19;
@@ -57,12 +65,12 @@
 
 :root[data-theme="dark"] .faq-accordion .contentBx .label{
   background: #0B0F19;
-  color: #E8EDF2;
+  color: #ffffff;
 }
 
 :root[data-theme="dark"] .faq-accordion .contentBx .content{
   background: #00030b;
-  color: #C7D3EA;
+  color: #f3f1f1;
 }
 
 :root[data-theme="dark"] .acc-btn{
@@ -73,7 +81,7 @@
 :root[data-theme="dark"] .acc-btn svg path{ fill:#E8EDF2; }
 
 :root[data-theme="dark"] .brands .logo {
-  background-image: url("images/sixlogo-dark.svg");
+  background-image: url("images/badges/sixlogo-dark.svg");
   
 }
 
@@ -81,7 +89,7 @@
 
 
 body {
-  font-size: 18px;
+   font-size: 18px;
    font-family: "Manrope", sans-serif; 
    font-weight:400;
    margin: 80px;
@@ -101,29 +109,6 @@ h1,h2,h3,h4,h5,h5 {
   color: var(--color-heading-text);
 }
 
-.container { 
-  max-width: 1328px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 1rem;
-  padding-left: 1rem;
-    
-  @media (width > 768px) {
-    max-width: 720px;
-  }
-
-  @media(width > 992px) {
-    max-width: 960px;
-  }
-
-  @media(width > 1200px) {
-    max-width: 1140px;
-  }
-
-  @media(width > 1400px) {
-    max-width: 1320px;
-  }
-     }
 
 
 .site-header {
@@ -147,9 +132,27 @@ h1,h2,h3,h4,h5,h5 {
   gap: 200px;
   padding: 6px 10px;
   cursor: pointer;
-  width: 50px;
-      
-      }
+  width: 40%;    
+  }
+.store-badges { display:inline-flex; line-height:0; }
+
+.store-badges .badges { height:56px; display:block; }
+
+
+/* växla med ditt data-theme */
+.badges--dark { display:none; }
+:root[data-theme="dark"] .badges--light { display:none; }
+:root[data-theme="dark"] .badges--dark  { display:block; }
+
+
+.badges--light { display:none; }
+:root[data-theme="light"] .badges--dark { display:none; }
+:root[data-theme="light"] .badges--light  { display:block; }
+
+
+
+
+
 
 .header-actions {
     
@@ -170,32 +173,116 @@ h1,h2,h3,h4,h5,h5 {
       display: grid;
       width: 80%;
       margin-right: 30px;
-    }
-.silicon-btn {
+}
 
-    width: 40%;
-  }
+.app-download-buttons {  
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  margin-left: 6rem;
+  width: 60%;
+}
+
+.store-badge { display:inline-flex; line-height:0; }
+
+.store-badge .badge { height:56px; display:block; }
 
 
+/* växla med ditt data-theme */
+.badge--dark { display:none; }
+:root[data-theme="dark"] .badge--light { display:none; }
+:root[data-theme="dark"] .badge--dark  { display:block; }
+
+
+.badge--light { display:none; }
+:root[data-theme="light"] .badge--dark { display:none; }
+:root[data-theme="light"] .badge--light  { display:block; }
+
+
+/* Wrapper: text + switch i rad */
+.theme-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap:.75rem;
+  cursor:pointer;
+  user-select:none;
+}
+
+/* Dölj den ”riktiga” checkboxen (men behåll den tillgänglig) */
+.theme-toggle input{
+  position:absolute;
+  inline-size:1px;
+  block-size:1px;
+  margin:-1px;
+  padding:0;
+  border:0;
+  clip:rect(0 0 0 0);
+  clip-path:inset(50%);
+  overflow:hidden;
+}
+
+/* Själva skenan/pillen */
+.theme-toggle .switch{
+  inline-size:48px;        /* bredd */
+  block-size:28px;         /* höjd  */
+  border-radius:999px;
+  background:#9aa0b3;      /* grå sken */
+  position:relative;
+  transition:background .2s ease;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.15);
+}
+
+/* Runda ”knoppen” */
+.theme-toggle .switch::before{
+  content:"";
+  position:absolute;
+  inset:3px auto auto 3px; /* top/right/bottom/left */
+  inline-size:22px;
+  block-size:22px;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:0 1px 2px rgba(0,0,0,.25);
+  transition:transform .2s ease;
+}
+
+/* Aktivt läge (ibockad) */
+#theme-toggle:checked + .switch{
+  background:#6366F1;                  /* lila när på */
+}
+#theme-toggle:checked + .switch::before{
+  transform:translateX(20px);          /* flytta knoppen */
+}
+
+/* Focus-stil för tangentbord */
+.theme-toggle input:focus-visible + .switch{
+  outline:2px solid #6366F1;
+  outline-offset:3px;
+}
+
+/* (valfritt) anpassa i dark theme om du vill */
+:root[data-theme="dark"] .theme-toggle .switch{
+  background:#4b5563;
+}
+:root[data-theme="dark"] #theme-toggle:checked + .switch{
+  background:#6366F1;
+}
+
+
+    
 .hero {
    background: #FFFFFF;
-background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(99, 102, 241, 0.07) 83%);
-padding-top: 5rem;
+   background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(99, 102, 241, 0.07) 83%);
+   padding-top: 5rem;
 
     .hero-area {
     display: flex;
     justify-content: space-between;
     gap: 3rem;
     text-align: center;
-    
+
     
      
-    @media (min-width >= 768px) {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-      text-align: left;
     
-    }
 
        .hero-content {
         flex-direction: column;
@@ -225,14 +312,16 @@ padding-top: 5rem;
         }
          
        }
-
+      
 
         .hero-image {
         margin-top: 100px;
           
+          }
        }
-    }
-  }
+      }
+ 
+    
 
 .btn-download {
         text-decoration: none;
@@ -244,70 +333,72 @@ padding-top: 5rem;
         
     }
 
-.brands {
 
-  height: auto;
-  display: inline-block;
-  height: 10px;
-  text-align: center;
-  width: 100%;
+    .brands .brands-img--light { display: inline-block;
+      background-color: #ffffff;
+      
+      margin-top: -8rem;
+     }
+    .brands .brands-img--dark  { display: none;
+    background-color: #0B0F19;
+    margin-top: -8rem;
+    }
+
+
+:root[data-theme="dark"] .brands .brands-img--light { display: none; }
+:root[data-theme="dark"] .brands .brands-img--dark  { display: inline-block; }
+
+.brands .logo { display: flex; justify-content: center; }
+.brands .brands-img { max-width: 100%; height: auto; }
     
-   .logo {
 
-   background-color: #ffffff;
-   padding-top: 80px;
-   margin-top: -100px;
-   border: 1px solid #fff;
-      }
-    }
-
-    .brands-img--dark {
-
-    }
+  
 
 .section-features h2 {
-  font-size: 40px;
-   display: block;  
+    font-size: 40px;
+    display: block;  
       /* gör att margin fungerar */
     margin: 0 auto;       /* centrerar bilden */
-   text-align: center;
+    text-align: center;
     margin-right: .1rem;
     margin-top: 6rem;
 }
 
 .section-features p {
-   font-size: 18px;
-   display: block;   
+    font-size: 18px;
+    display: block;   
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 1.7rem;
     margin-top: 40px;
-    color: #565973
+    color: #9397AD;
 
 }
+:root[data-theme="dark"] .section-features p{
+  background: #0B0F19;
+  color: #f3f1f1;}
 
 .easypayments {
-display: block;  
-      /* gör att margin fungerar */
+    display: block;  
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 378px;
     margin-top: -250px;
 }
 .easypayments-text h3 {
-   font-size: 12px;
-   display: block;   
+    font-size: 12px;
+    display: block;   
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 268px;
     margin-top: -38px;
 }
 
 .easypayments-text p {
-   font-size: 8px;
-   display: block;   
+    font-size: 8px;
+    display: block;   
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 205px;
     margin-top: 15px;
     color: #565973
@@ -315,28 +406,27 @@ display: block;
 
 .coststatistics {
 
-display: block;  
-      /* gör att margin fungerar */
+    display: block;  
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 378px;
     margin-top: 25px;
 
 }
 .coststatistics-text h3 {
-   font-size: 10px;
-   display: block;   
+    font-size: 10px;
+    display: block;   
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 283px;
     margin-top: -37px;
 }
 
 .coststatistics-text p {
-   font-size: 8px;
-   display: block;   
+    font-size: 8px;
+    display: block;   
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 240px;
     margin-top: 15px;
     color: #565973
@@ -344,27 +434,26 @@ display: block;
 
 .regularcashback {
 
-display: block;  
-      /* gör att margin fungerar */
+    display: block;  
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 378px;
     margin-top: 25px;
 }
 
 .regularcashback-text h3 {
-   font-size: 10px;
-   display: block;   
+    font-size: 10px;
+    display: block;   
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 260px;
     margin-top: -37px;
 }
 .regularcashback-text p {
-   font-size: 8px;
-   display: block;   
+    font-size: 8px;
+    display: block;   
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 205px;
     margin-top: 15px;
     color: #565973
@@ -372,26 +461,26 @@ display: block;
 
 .datasecurity {
 
-display: block;  
+    display: block;  
       /* gör att margin fungerar */
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 150px;
     margin-top: -215px;
 }
 .datasecurity-text h3 {
-   font-size: 10px;
-   display: block;   
+    font-size: 10px;
+    display: block;   
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 70px;
     margin-top: -37px;
 }
 .datasecurity-text p {
-   font-size: 8px;
-   display: block;   
+    font-size: 8px;
+    display: block;   
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 20px;
     margin-top: 15px;
     color: #565973
@@ -399,26 +488,26 @@ display: block;
 
 .support {
 
-display: block;  
+    display: block;  
       /* gör att margin fungerar */
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 150px;
     margin-top: 25px;
 }
 .support-text h3 {
-   font-size: 10px;
-   display: block;   
+    font-size: 10px;
+    display: block;   
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 70px;
     margin-top: -37px;
 }
 .support-text p {
-   font-size: 8px;
-   display: block;   
+    font-size: 8px;
+    display: block;   
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 1px;
     margin-top: 15px;
     color: #565973
@@ -426,26 +515,26 @@ display: block;
 
 .topstandards {
 
-display: block;  
+    display: block;  
       /* gör att margin fungerar */
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 150px;
     margin-top: 25px;
 }
 .topstandards-text h3 {
-   font-size: 10px;
-   display: block;   
+    font-size: 10px;
+    display: block;   
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 65px;
     margin-top: -37px;
 }
 .topstandards-text p {
-   font-size: 8px;
-   display: block;   
+    font-size: 8px;
+    display: block;   
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 3px;
     margin-top: 15px;
     color: #565973
@@ -455,40 +544,38 @@ display: block;
   margin-block: 40px;   /* Luft mellan sektioner */
 }
 
-
-
 .tremobiler {
 
     display: block;        /* gör att margin fungerar */
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-top: 50px;
 }
 .section-head-center h2 {
-    font-size: 30px;
-     display: block;  
+       font-size: 30px;
+       display: block;  
         /* gör att margin fungerar */
         margin: 0 auto;       /* centrerar bilden */
-     text-align: center;
+        text-align: center;
 
         margin-top: 100px;
         padding: 0px;
 }
 
 .tremobiler-text h4 {
-    font-size: 24px;
-    display: block;   
+     font-size: 24px;
+     display: block;   
      margin: 0 auto;       /* centrerar bilden */
-    text-align: right;
+     text-align: right;
      margin-right: 510px;
      margin-top: 40px;
 }
 .tremobiler-text p {
-    font-size: 16px;
-    display: block;   
+     font-size: 16px;
+     display: block;   
      margin: 0 auto;       /* centrerar bilden */
-    text-align: center;
-    margin-right: -20px;
+     text-align: center;
+     margin-right: -20px;
      margin-top: 5px;
      color: #565973
 }
@@ -512,6 +599,7 @@ display: block;
    text-align: right;
     margin-right: 50px;
     margin-top: -260px;
+    width: 350px;
 }
 .split-text h2 {
     font-size: 32px;
@@ -533,51 +621,47 @@ display: block;
 .blue-icon__a {
      display: block;   
      margin: 0 auto;       /* centrerar bilden */
-    text-align:left;
+     text-align:left;
      margin-left: 0px;
      margin-top: -78px;
-
+     width: 19px;
 }
 .blue-icon__b {
- display: block;   
-     margin: 0 auto;       /* centrerar bilden */
-    text-align:left;
-     margin-left: 0px;
-     margin-top:3px;
-}
-.blue-icon__c {
     display: block;   
      margin: 0 auto;       /* centrerar bilden */
     text-align:left;
      margin-left: 0px;
+     margin-top:3px;
+     width: 19px;
+}
+.blue-icon__c {
+     display: block;   
+     margin: 0 auto;       /* centrerar bilden */
+     text-align:left;
+     margin-left: 0px;
      margin-top: 2px;
+     width: 19px;
 
 }
-
-
-     
 
 .learn-more-btn {
-   display: block;        /* gör att margin fungerar */
+    display: block;        /* gör att margin fungerar */
     margin: 0 auto;       /* centrerar bilden */
-   text-align: left;
+    text-align: left;
     margin-left: 1px;
     margin-top: 50px;
-    
+    width: 120px;
 }
-
 
 .learn-more-btn-b{
     display: block;        /* gör att margin fungerar */
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 500px;
     margin-top: 60px;
     margin-bottom: 0px;
 
 }
-
-  
 .section--isolated {
   display: flow-root;   /* Skapar BFC */
   margin-block: 40px;   /* Luft mellan sektioner */
@@ -598,10 +682,9 @@ display: block;
     margin-top: -90px;
 }
 .future-card__cback {
- display: block;  
-      /* gör att margin fungerar */
+    display: block;  
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: 120px;
     margin-top: -12px;
 }
@@ -611,7 +694,7 @@ display: block;
     text-align: right;
     margin-right: 159px;
     margin-top: 5px; 
-     color: #565973
+    color: #565973
 }
     
 .future-card__b p {
@@ -624,15 +707,16 @@ display: block;
 
 }
 .learn-more-btn__f {
-  display: block;        /* gör att margin fungerar */
+    display: block;        /* gör att margin fungerar */
     margin: 0 auto;       /* centrerar bilden */
     text-align: left;
     margin-right: 164px;
     margin-top: 30px;
+    width: 120px;
 
 }
 .contact-visa {
-display: block;        /* gör att margin fungerar */
+    display: block;        /* gör att margin fungerar */
     margin: 0 auto;       /* centrerar bilden */
     text-align: left;
     margin-left: 10px;
@@ -653,16 +737,12 @@ display: block;        /* gör att margin fungerar */
 
 }
 
-
-
 .testimonials-area {
   background-color: #F3F6FF;
   display: flex;
   height: 400px;
   justify-content: space-between;
-
-  
-  
+ 
 }
 .testimonials-content {
   display: flex;
@@ -677,9 +757,6 @@ display: block;        /* gör att margin fungerar */
 .testimonials-title {
  margin-left: 100px;
  margin-top: -60px;
-
-  
-
 }
 
 .tcard {
@@ -697,14 +774,13 @@ color: #FFBA08;
 margin-top: 55px;
 
 }
+
 .quote {
- position: relative;
+  position: relative;
   display: grid;
   margin-left: 1px;
 
-  @media (min-width: 900px){
-  .quote{ width: 28px; height: 28px; top: -12px; }
-   }
+  
 }
 .name {
   font-size: 12px;
@@ -714,18 +790,17 @@ margin-top: 55px;
 }
 .role {
   font-size: 10px;
-  margin-left: 60px;
-  
+  margin-left: 60px;  
 }
 
 .testimonials-right {
   display: grid;
-align-items:center;
-justify-content: space-between;
+  align-items:center;
+  justify-content: space-between;
 
 }
 .testimonials-text-right {
-  font-size: 12px;
+   font-size: 12px;
    text-align: center;
    margin-top: 5px;
 
@@ -733,26 +808,23 @@ justify-content: space-between;
 
 .quote-right {
   position: relative;
-margin-top: -25px;
-
-
+  margin-top: -25px;
 
 }
 .stars-right {
   color: #FFBA08;
 
-
 }
 
 .tcard-right{
- background: #ffffff;
+  background: #ffffff;
   max-width: 90%;
   height: 260px;
- margin-right: 200px;
- margin-top: 10px;
- display: grid;
- width: 300px;
- border-radius: 10px;
+  margin-right: 200px;
+  margin-top: 10px;
+  display: grid;
+  width: 300px;
+  border-radius: 10px;
 }
 .avatar-right {
   width: 5rem;
@@ -774,7 +846,6 @@ margin-left: 30px;
    }
   }
 
-
 .faq {
                                 
   margin-top: 5rem;   
@@ -790,19 +861,14 @@ margin-left: 30px;
 }
  
 .faq-area {
-display: flex;
+ display: flex;
  margin-top: 5rem;
  margin-bottom: 10rem;
  align-items: flex-start;
  justify-content: space-between;
- 
- 
-
-
-
-}
-
-
+        }
+      
+    
 .faq-title {
   font-size: 20px;
   margin-top: 0;
@@ -812,15 +878,11 @@ display: flex;
 
 .faq-accordion {
   
-  flex-direction:column;
+   flex-direction:column;
    max-width: 500px;
    overflow-anchor: none;
    margin-top: 6rem;
    
-   
-   
-  
-  
 }
 
 .faq-accordion .contentBx {
@@ -846,7 +908,7 @@ display: flex;
 }
 .contentBx {
   
- width: 500px;
+  width: 500px;
   border-radius: .5rem;
   overflow: hidden;
   margin-bottom:  5rem;
@@ -888,11 +950,7 @@ display: flex;
   
   margin-left: auto;
   margin-top: 1rem;
-  
-  
-
-  
-  
+   
 }
 
 .faq-accordion .contentBx .label::before
@@ -913,13 +971,7 @@ display: flex;
   height: 0px;
   overflow: hidden;
   transition: 0.5s;
-  border-radius: 10px;
-  
-  
-  
-  
-
-  
+  border-radius: 10px; 
 }
 .faq-accordion .contentBx.active .content {
     height: 60px;
@@ -929,12 +981,6 @@ display: flex;
             
 }
   
-  
-
-
-    @media (width >= 768px) {
-        padding-bottom: 0;
-    }
 
     .faq-area {
        display: flex;
@@ -964,10 +1010,14 @@ display: flex;
       margin-bottom: 1rem;
       margin-top: -5rem;
     
-
+      
       }
     }
   }
+
+
+
+
 .telefon-contact {
   display: grid;
   margin-bottom: -32px;
@@ -984,10 +1034,10 @@ margin-top: 3.5rem;
 
   margin-left: 230px;
   margin-top: -12rem;
-border: 1px solid #d5d7e9;
-height: 166px;
-border-radius: 10px;
-width: 190px;
+  border: 1px solid #d5d7e9;
+  height: 166px;
+  border-radius: 10px;
+  width: 190px;
 
   
     
@@ -1010,79 +1060,77 @@ width: 190px;
     }
    }
   
-
-
-
-
-
-
+  
 .section--isolated {
   display: flow-root;   /* Skapar BFC */
   margin-block: 100px;   /* Luft mellan sektioner */
 }
 
 .subscribe-btn {
-  display: block;        /* gör att margin fungerar */
+    display: block;        /* gör att margin fungerar */
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
+    text-align: right;
     margin-right: -28px;
     margin-top: -33px;
     margin-bottom: 0px;
+    width: 90px;
 }
 
 
-/* Inputfältet */
-.input {
-flex: 1;                   /* Gör så fältet tar all plats till vänster */
-  padding: 10px;
-  font-size: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-top: -20px;
-  top: -10px;
-  width: 290px;
-
-}
 .subscribe-form {
-  display: block; 
-  font-size: 10px;       /* gör att margin fungerar */
+    display: block; 
+    font-size: 10px;       /* gör att margin fungerar */
     margin: 0 auto;       /* centrerar bilden */
-   text-align: right;
-    margin-right: 160px;
+    text-align: right;
+    margin-right: 110px;
     margin-top: -60px;
     margin-bottom: 0px; 
 }
 h6.subscribe-text   {
-   font-size: 10x;
+    font-size: 10x;
     display: block;        /* gör att margin fungerar */       /* centrerar bilden */
     text-align: left;
     margin-left: 110px;
     margin-top: -40px;
 }
 .subscribe-icon {
-display: block;        /* gör att margin fungerar */
+    display: block;        /* gör att margin fungerar */
     margin: 0 auto;       /* centrerar bilden */
-   text-align: left;
+    text-align: left;
     margin-left: 60px;
     margin-top: 10px;
     margin-bottom: 0px;
+    width: 30px;
 }
 
-.kuver-icon {
-margin-bottom: -.4rem;
-  
+
+ 
+.email-input {
+  background-image: url('images/icon-email.svg');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 15px 15px;
+  padding-left: 30px; /* Flyttar texten så den inte täcker ikonen */
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 10px;
+  width: 30%;
 }
+
+
 .subscribe {
   
   background: #f5f8ff;      /* ljusblå bakgrund */
-  padding: 40px 20px;       /* luft inuti bakgrunden */
+  padding: 40px 20px;    /* luft inuti bakgrunden */
   border-radius: 10px;      /* rundade hörn */
   margin: 40px auto;        /* flytta ner rutan på sidan */
   max-width: 1000px; 
   height: 40px;
 
 }
-.site-footer {
+
+.footer {
   background-color: #ffffff; /* ljusgrå bakgrund */
   padding: 15px 20px;
   display: flex;
@@ -1093,28 +1141,51 @@ margin-bottom: -.4rem;
 }
 .footer-center {
     font-size: 10px;
-  text-align: center;
-  flex-grow: 1; /* gör att den centreras fint */
-  color: #0f0f0f; 
+    text-align: center;
+    flex-grow: 1; /* gör att den centreras fint */
+    color: #575252; }
+
+
+
+
+.page {
+    max-width: 576px;
+    width: 100%;
+    margin: auto;
+    padding: 0 1rem;
+}
+@media (min-width: 425px) {
+  .page {
+    
+  }
+}
+@media (min-width: 600px) {
+  .page {
+    max-width: 1170px;
+  }
 }
 
-@media (max-width: 480px){
-  .header-area { height: 56px; }
-  .header-actions { gap: 10px; }
-  .brand img { height: 24px; }
-  .signin-btn img { height: 26px; }
+@media (min-width: 768px) {
+    .page {
+        max-width: 1170px;
+        padding: 0 0.5rem;
+    }
 }
 
-.container{
-  width: min(100% - 2rem, 1320px);
-  margin-inline: auto;
-  padding-inline: 0; /* vi använder 2rem via width-raden ovan */
+@media (min-width: 992px) {
+    .page {
+      max-width: 1200px;
+    }
+}
+ 
+@media (min-width: 1200px) {
+    .page {
+        max-width: 1400px;
+        padding: 0 2rem; 
+    }
 }
 
-@media (min-width: 768px){ .container{ max-width: 720px } }
-@media (min-width: 992px){ .container{ max-width: 960px } }
-@media (min-width: 1200px){ .container{ max-width: 1140px } }
-@media (min-width: 1400px){ .container{ max-width: 1320px } }
+
 
 
 img, svg {

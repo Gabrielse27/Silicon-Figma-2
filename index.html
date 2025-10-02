@@ -16,16 +16,18 @@
 
     <link rel="stylesheet" href="main.css">
    <script src="darkmode.js" defer></script>
-    
-</head>
-<body>
+   </head>
+  <body>
 
     <header class="site-header">       
   <div class="header-area">
     <!-- Vänster: Silicon logga -->
 
     <div class="silicon-btn"> 
-      <img src="images/silicon-btn2.svg" alt="" class="silicon-btn">
+      <img class= "badges badges--light" src="images/badges/silicon-btn-light.svg" alt ="Silicon logo" class="store-badges">
+     
+      <img class="badges badges--dark" src="images/badges/silicon-btn-dark.svg" alt = "Silicon logo" class="store-badges">
+
     </div>
 
     <!-- Höger: Dark mode + Sign in -->
@@ -61,19 +63,29 @@
             <p class="hero-ingress">We offer you a new generation of the mobile banking.<br>
               Save, spend & manage money in your pocket.</p>
 
-        <div class="app-download-buttons">
+     <div class="app-download-buttons">
 
-          <a href="https://apps.apple.com/se/app" class="btn-download">
-         <img src="appstore.svg" alt="Download att the App Store">
-          </a>
+    <a href="https://apps.apple.com/se/app" class="store-badge">
+    <img class="badge badge--light" src="images/badges/appstore-light.svg"
+         alt="Download on the App Store">
+    <img class="badge badge--dark"  src="images/badges/appstore-dark.svg"
+         alt="Download on the App Store">
+  </a>
 
-          <a href="https://play.google.com/store/apps" class="btn-download">
-            <img src="googleplay.svg" alt="Get On Google Play">
-          </a>
-            </div>
+
+    <a href="https://play.google.com/store/apps" class="store-badge">
+    <img class="badge badge--light" src="images/badges/googleplay-light.svg"
+         alt="Get it on Google Play">
+    <img class="badge badge--dark"  src="images/badges/googleplay-dark.svg"
+         alt="Get it on Google Play">
+  </a>
+
+
+
+
+  
+        </div>
           </div>
-
-
 
 
           <div class="hero-image">
@@ -89,8 +101,15 @@
 
     <section id="brands" class="brands">
        <div class="logo">
-        <img src="images/sixlogo.svg" alt="brand logos" class="brands-img brands-img--light"> 
-        
+
+        <img src="images/badges/sixlogo-light.svg" alt="Partner brands" class="brands brands-img--light">
+      
+      
+
+    <!-- Mörk variant (visas i dark mode) -->
+    <img src="images/badges/sixlogo-dark.svg" alt="" aria-hidden="true" class="brands brands-img--dark">
+      
+    
        </div>
       
      </section>
@@ -203,7 +222,7 @@
 
 
     
-<!-- =================== App Features (split grid) =================== -->
+<!----- App Features ----------------------------->
 <section class="app-futures">
   <div class="container split-grid">
     <!-- Vänster: text -->
@@ -217,20 +236,20 @@
 
       <a href ="#" class ="blue-icon__a">
 
-        <img src="images/blueiconcheck.svg" alt ="Blue Icon a" width="19" class="blue-icon__a"/>
+        <img src="images/blueiconcheck.svg" alt ="Blue Icon a" class="blue-icon__a"/>
       </a>
       <a href="#" class="blue-icon__b">
-        <img src="images/blueiconcheck.svg" alt="Blue Icon b" width="19" class="blue-icon__b"/>
+        <img src="images/blueiconcheck.svg" alt="Blue Icon b" class="blue-icon__b"/>
       </a>
        <a href="#"class="blue-icon__c">
 
-       <img src="images/blueiconcheck.svg" alt="Blue Icon c"width="19" class="blue-icon__c"/>
+       <img src="images/blueiconcheck.svg" alt="Blue Icon c" class="blue-icon__c"/>
         </a>
        
 
       <a href="#" class="learn-more-btn">
 
-        <img src="images/btn-learn-more.svg" alt ="Learn more" width="100" clas="learn-more-btn"/>
+        <img src="images/btn-learn-more.svg" alt ="Learn more" clas="learn-more-btn"/>
     </a>
     </div>
     </div>
@@ -238,15 +257,15 @@
 
     <!-- Höger: bild -->
     <figure class="split-art">
-      <!-- Byt filnamnet i din /images/ mapp till detta utan mellanslag -->
-      <img src="images/diagram-app-future2.svg" alt=" Diagram App Future" width="300" class="diagram_app_future"/>
+      
+      <img src="images/diagram-app-future2.svg" alt=" Diagram App Future" class="diagram_app_future"/>
            
     </figure>
   </div>
 </section>
 
 
-<!-- =================== Feature Cards (2 kolumner) =================== -->
+<!------------------ Feature Cards (2 kolumner) ----------------------------->
 <section class="feature-list">
   <div class="future-card__icon">
     <!-- Card 1 -->
@@ -280,7 +299,7 @@
         </p>
         </div>
         <a href="#" class="learn-more-btn__f">
-       <img src="images/btn-learn-more.svg" alt="Learn more f" width="100" class="learn-more-btn__f"/>
+       <img src="images/btn-learn-more.svg" alt="Learn more f" class="learn-more-btn__f"/>
           </a>
        <a href="#" class="contact-visa">
 
@@ -295,7 +314,7 @@
 </section>
 
 
-<!-- Testimonials Start-->
+<!-------------------- Testimonials Start-------------------->
    
    <section id="testimonials" class="testimonials" aria-labelledby="testimonials-title">
   <div class="container">
@@ -339,7 +358,7 @@
         
       
 
-  <!--Kort nr.2-->
+  <!--------------------Kort nr.2-------------------->
     
    <div class="testimonials-right">
    
@@ -375,10 +394,10 @@
    </div> 
 </div>
 </section>
-          <!--Testimonials Slut-->
+          <!--------------------Testimonials Slut--------------->
 
 
-          <!--Faq Start-->
+          <!--------------Faq Start---------------->
 
    <section id="faq" class="faq">
     <div class="container">
@@ -613,8 +632,9 @@
   <div class="container">
     <div class="subscribe-card">
       <div class="subscribe-lead">
-        <img src="images/subscribe-larm.svg"alt="subs-icon"width="30" class="subscribe-icon">
-        <!-- Simple icon (replace with SVG if you prefer) -->
+
+        <img src="images/subscribe-larm.svg"alt="subs-icon" class="subscribe-icon">
+        
         <span class="subscribe-icon" aria-hidden="true"></span>
 
          
@@ -629,19 +649,23 @@
       <form class="subscribe-form" action="#" method="post" role="form">
 
         <label class="sr-only" for="subscribe-email">
+
           
        
 
         </label>
       
-        <input
+        <input type="email" id="subscribe-email" class="email-input" name="email" placeholder="Your email" required inputmode="email">
+
+          
+
+
         
-          type="email" id="subscribe-email" class="input" name="email" placeholder="Your email" required inputmode="email" autocomplete="email">
-      </input>
+        
     
         
         <div class="subscribe-btn">
-          <img src="images/subscribe-btn.svg" alt="Subscribe" width="90" class="subscribe-btn">
+          <img src="images/subscribe-btn.svg" alt="Subscribe"  class="subscribe-btn">
         
 
         </form>
@@ -653,7 +677,7 @@
 
   </main>
 
-<footer class="site-footer">
+<footer class="footer">
         <div class="footer-left">
   </div>
   <div class="footer-center">
