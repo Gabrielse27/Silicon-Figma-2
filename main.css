@@ -24,7 +24,7 @@
     }
 :root[data-theme="dark"] {
   --color-body-background: #0B0F19;
-  --color-body-text: #ffffff;
+  --color-body-text: #d7d1d1;
   --color-heading-text: #ffffff;
 }
 
@@ -70,7 +70,7 @@
 
 :root[data-theme="dark"] .faq-accordion .contentBx .content{
   background: #00030b;
-  color: #f3f1f1;
+  color: #afacac;
 }
 
 :root[data-theme="dark"] .acc-btn{
@@ -84,9 +84,17 @@
   background-image: url("images/badges/sixlogo-dark.svg");
   
 }
+:root[data-theme="dark"] .feature-bullets p { 
+  background:#0B0F19;
+  color: #afacac; }
 
-
-
+:root[data-theme="dark"] .tremobiler-text p { 
+  background-color:#010b15;
+  color: #afacac; }
+  
+:root[data-theme="dark"] .hero-ingress { 
+  background-color:#010b15;
+  color: #afacac; }
 
 body {
    font-size: 18px;
@@ -112,7 +120,6 @@ h1,h2,h3,h4,h5,h5 {
 
 
 .site-header {
-  position: stick; top: 0;
   background: #ffffff;
 
 }
@@ -161,13 +168,7 @@ h1,h2,h3,h4,h5,h5 {
   gap: 16px;
   align-items: center;
 }
-       .darkmode-btn {
-       background-color: black;
-       color: white;
-        
-      }
-  
-    
+       
 
 .signin-btn {
       display: grid;
@@ -182,6 +183,8 @@ h1,h2,h3,h4,h5,h5 {
   margin-left: 6rem;
   width: 60%;
 }
+
+/* App Store  GooglePlay icons light/dark*/
 
 .store-badge { display:inline-flex; line-height:0; }
 
@@ -232,7 +235,7 @@ h1,h2,h3,h4,h5,h5 {
   box-shadow: inset 0 1px 2px rgba(0,0,0,.15);
 }
 
-/* Runda ”knoppen” */
+
 .theme-toggle .switch::before{
   content:"";
   position:absolute;
@@ -244,22 +247,22 @@ h1,h2,h3,h4,h5,h5 {
   box-shadow:0 1px 2px rgba(0,0,0,.25);
   transition:transform .2s ease;
 }
+  /* Dark Mode Light/mode button*/
 
-/* Aktivt läge (ibockad) */
 #theme-toggle:checked + .switch{
-  background:#6366F1;                  /* lila när på */
+  background:#6366F1;                 
 }
 #theme-toggle:checked + .switch::before{
   transform:translateX(20px);          /* flytta knoppen */
 }
 
-/* Focus-stil för tangentbord */
+
 .theme-toggle input:focus-visible + .switch{
   outline:2px solid #6366F1;
   outline-offset:3px;
 }
 
-/* (valfritt) anpassa i dark theme om du vill */
+
 :root[data-theme="dark"] .theme-toggle .switch{
   background:#4b5563;
 }
@@ -316,6 +319,7 @@ h1,h2,h3,h4,h5,h5 {
 
         .hero-image {
         margin-top: 100px;
+        width: 40%;
           
           }
        }
@@ -338,7 +342,7 @@ h1,h2,h3,h4,h5,h5 {
       background-color: #ffffff;
       
       margin-top: -8rem;
-     }
+    }
     .brands .brands-img--dark  { display: none;
     background-color: #0B0F19;
     margin-top: -8rem;
@@ -376,7 +380,7 @@ h1,h2,h3,h4,h5,h5 {
 }
 :root[data-theme="dark"] .section-features p{
   background: #0B0F19;
-  color: #f3f1f1;}
+  color: #a4a3a3;}
 
 .easypayments {
     display: block;  
@@ -393,6 +397,10 @@ h1,h2,h3,h4,h5,h5 {
     margin-right: 268px;
     margin-top: -38px;
 }
+
+:root[data-theme="dark"] .easypayments-text p {
+  background: #0B0F19;
+  color: #a4a3a3;}
 
 .easypayments-text p {
     font-size: 8px;
@@ -421,6 +429,10 @@ h1,h2,h3,h4,h5,h5 {
     margin-right: 283px;
     margin-top: -37px;
 }
+:root[data-theme="dark"] .coststatistics-text p{
+  background: #0B0F19;
+  color: #a4a3a3;}
+
 
 .coststatistics-text p {
     font-size: 8px;
@@ -449,6 +461,10 @@ h1,h2,h3,h4,h5,h5 {
     margin-right: 260px;
     margin-top: -37px;
 }
+:root[data-theme="dark"] .regularcashback-text p{
+  background: #0B0F19;
+  color: #a4a3a3;}
+
 .regularcashback-text p {
     font-size: 8px;
     display: block;   
@@ -476,6 +492,11 @@ h1,h2,h3,h4,h5,h5 {
     margin-right: 70px;
     margin-top: -37px;
 }
+:root[data-theme="dark"] .datasecurity-text p{
+  background: #0B0F19;
+  color: #a4a3a3;}
+
+
 .datasecurity-text p {
     font-size: 8px;
     display: block;   
@@ -503,6 +524,10 @@ h1,h2,h3,h4,h5,h5 {
     margin-right: 70px;
     margin-top: -37px;
 }
+:root[data-theme="dark"] .support-text p{
+  background: #0B0F19;
+  color: #a4a3a3;}
+
 .support-text p {
     font-size: 8px;
     display: block;   
@@ -530,6 +555,10 @@ h1,h2,h3,h4,h5,h5 {
     margin-right: 65px;
     margin-top: -37px;
 }
+:root[data-theme="dark"] .topstandards-text p{
+  background: #0B0F19;
+  color: #a4a3a3;}
+
 .topstandards-text p {
     font-size: 8px;
     display: block;   
@@ -599,7 +628,7 @@ h1,h2,h3,h4,h5,h5 {
    text-align: right;
     margin-right: 50px;
     margin-top: -260px;
-    width: 350px;
+    width: 35%;
 }
 .split-text h2 {
     font-size: 32px;
@@ -609,7 +638,7 @@ h1,h2,h3,h4,h5,h5 {
      margin-right: 193px;
      margin-top: 300px;
 }
-.feature-bullets p{
+.feature-bullets p {
     font-size: 16px; 
     text-align:left; 
     margin-left: 20px;
@@ -624,7 +653,7 @@ h1,h2,h3,h4,h5,h5 {
      text-align:left;
      margin-left: 0px;
      margin-top: -78px;
-     width: 19px;
+     width: 12%;
 }
 .blue-icon__b {
     display: block;   
@@ -632,7 +661,7 @@ h1,h2,h3,h4,h5,h5 {
     text-align:left;
      margin-left: 0px;
      margin-top:3px;
-     width: 19px;
+     width: 12%;
 }
 .blue-icon__c {
      display: block;   
@@ -640,7 +669,7 @@ h1,h2,h3,h4,h5,h5 {
      text-align:left;
      margin-left: 0px;
      margin-top: 2px;
-     width: 19px;
+     width: 12%;
 
 }
 
@@ -650,7 +679,7 @@ h1,h2,h3,h4,h5,h5 {
     text-align: left;
     margin-left: 1px;
     margin-top: 50px;
-    width: 120px;
+    width: 20%;
 }
 
 .learn-more-btn-b{
@@ -687,24 +716,32 @@ h1,h2,h3,h4,h5,h5 {
     text-align: right;
     margin-right: 120px;
     margin-top: -12px;
+    
 }
+:root[data-theme="dark"] .future-card__body p { 
+  background-color:#010b15;
+  color: #afacac; }
+
 .future-card__body p {
     font-size: 8px;
     display: block;        /* gör att margin fungerar */       /* centrerar bilden */
     text-align: right;
     margin-right: 159px;
-    margin-top: 5px; 
+    margin-top: 9px; 
     color: #565973
 }
-    
+  
+:root[data-theme="dark"] .future-card__b p { 
+  background-color:#010b15;
+  color: #afacac; }
+
 .future-card__b p {
     font-size: 8px;
-    display: block;        /* gör att margin fungerar */       /* centrerar bilden */
+    display: block;        
     text-align: right;
     margin-right: 290px;
     margin-top: -29px; 
     color: #565973
-
 }
 .learn-more-btn__f {
     display: block;        /* gör att margin fungerar */
@@ -712,7 +749,7 @@ h1,h2,h3,h4,h5,h5 {
     text-align: left;
     margin-right: 164px;
     margin-top: 30px;
-    width: 120px;
+    width: 34%;
 
 }
 .contact-visa {
@@ -721,6 +758,7 @@ h1,h2,h3,h4,h5,h5 {
     text-align: left;
     margin-left: 10px;
     margin-top: -240px;
+    width: 52%;
 }
 
 .section--isolated {
@@ -946,8 +984,6 @@ margin-left: 30px;
 
 .chev-btn {
   display: flex;
-  
-  
   margin-left: auto;
   margin-top: 1rem;
    
@@ -967,7 +1003,7 @@ margin-left: 30px;
 .faq-accordion .contentBx .content {
   position: static !important;
   padding: 0px 16px;
-  background: #f0eeee;
+  background: #ffffff;
   height: 0px;
   overflow: hidden;
   transition: 0.5s;
@@ -1079,7 +1115,7 @@ margin-top: 3.5rem;
 
 .subscribe-form {
     display: block; 
-    font-size: 10px;       /* gör att margin fungerar */
+    font-size: 10px;       
     margin: 0 auto;       /* centrerar bilden */
     text-align: right;
     margin-right: 110px;
@@ -1125,7 +1161,7 @@ h6.subscribe-text   {
   padding: 40px 20px;    /* luft inuti bakgrunden */
   border-radius: 10px;      /* rundade hörn */
   margin: 40px auto;        /* flytta ner rutan på sidan */
-  max-width: 1000px; 
+  max-width: 80%; 
   height: 40px;
 
 }
@@ -1154,21 +1190,23 @@ h6.subscribe-text   {
     margin: auto;
     padding: 0 1rem;
 }
-@media (min-width: 425px) {
-  .page {
-    
-  }
+
+@media (max-width: 576px) {
+   .page {
+    font-size: 32px;
+    margin-left: 1rem;}
 }
+
 @media (min-width: 600px) {
   .page {
-    max-width: 1170px;
+    max-width: 720px;
   }
 }
 
 @media (min-width: 768px) {
     .page {
         max-width: 1170px;
-        padding: 0 0.5rem;
+        padding: 0 1rem;
     }
 }
 
