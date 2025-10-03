@@ -579,6 +579,7 @@ h1,h2,h3,h4,h5,h5 {
     margin: 0 auto;       /* centrerar bilden */
     text-align: right;
     margin-top: 50px;
+    width: 82%;
 }
 .section-head-center h2 {
        font-size: 30px;
@@ -702,6 +703,7 @@ h1,h2,h3,h4,h5,h5 {
     text-align: right;
     margin-right: 180px;
     margin-top: 250px;
+    width: 18%;
 }
 .future-card__title h4 {
     font-size: 16px;
@@ -716,6 +718,7 @@ h1,h2,h3,h4,h5,h5 {
     text-align: right;
     margin-right: 120px;
     margin-top: -12px;
+    width: 18%;
     
 }
 :root[data-theme="dark"] .future-card__body p { 
