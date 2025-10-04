@@ -771,15 +771,7 @@ h1,h2,h3,h4,h5,h5 {
   display: flow-root;   /* Skapar BFC */
   margin-block: 40px;   /* Luft mellan sektioner */
 }
-.container {
-    width: 100%;
-   max-width: 1320px;
-   margin-left: auto;
-   margin-right: auto;
-   padding-left: 1rem;
-   padding-right: 1rem;
 
-}
 
 .testimonials-area {
   background-color: #F3F6FF;
@@ -1187,44 +1179,52 @@ h6.subscribe-text   {
     flex-grow: 1; /* gör att den centreras fint */
     color: #575252; }
 
-
-
-
-.page {
-    max-width: 576px;
+    .container {
     width: 100%;
-    margin: auto;
-    padding: 0 1rem;
+   max-width: 1320px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 1rem;
+   padding-right: 1rem;
+
 }
 
-@media (max-width: 576px) {
-   .page {
+
+ 
+
+@media (width >= 576px) {
+    .site-header .hero .brands .features-grid .how-does-it-work .app-futures .testimonials .faq .subscribe .footer{
+    max-width: 470;
     font-size: 32px;
     margin-left: 1rem;}
 }
 
-@media (min-width: 600px) {
-  .page {
-    max-width: 720px;
+@media (width >= 600px) {
+  .site-header .hero .brands .features-grid .how-does-it-work .app-futures .testimonials .faq .subscribe .footer
+   {
+    max-width: 560px;
   }
 }
 
-@media (min-width: 768px) {
-    .page {
-        max-width: 1170px;
+@media (width >= 768px) {
+  .site-header .hero .brands .features-grid .how-does-it-work .app-futures .testimonials .faq .subscribe .footer
+     {
+        max-width: 720px;
         padding: 0 1rem;
     }
 }
 
-@media (min-width: 992px) {
-    .page {
-      max-width: 1200px;
+@media (width >= 992px) {
+  .site-header .hero .brands .features-grid .how-does-it-work .app-futures .testimonials .faq .subscribe .footer
+     {
+      max-width: 960px;
     }
 }
  
-@media (min-width: 1200px) {
-    .page {
-        max-width: 1400px;
+@media (width >= 1400px) {
+  .site-header .hero .brands .features-grid .how-does-it-work .app-futures .testimonials .faq .subscribe .footer
+     {
+        max-width: 1320px;
         padding: 0 2rem; 
     }
 }
