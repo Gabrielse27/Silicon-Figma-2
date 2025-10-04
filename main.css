@@ -80,6 +80,7 @@
 
 :root[data-theme="dark"] .acc-btn svg path{ fill:#E8EDF2; }
 
+  /* brands photo light/dark */
 :root[data-theme="dark"] .brands .logo {
   background-image: url("images/badges/sixlogo-dark.svg");
   
@@ -140,7 +141,9 @@ h1,h2,h3,h4,h5,h5 {
   padding: 6px 10px;
   cursor: pointer;
   width: 40%;    
-  }
+  } 
+
+  /* silicon light/dark */
 .store-badges { display:inline-flex; line-height:0; }
 
 .store-badges .badges { height:56px; display:block; }
