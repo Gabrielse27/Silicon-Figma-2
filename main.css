@@ -287,8 +287,6 @@ h1,h2,h3,h4,h5,h5 {
     text-align: center;
 
     
-     
-    
 
        .hero-content {
         flex-direction: column;
@@ -326,10 +324,9 @@ h1,h2,h3,h4,h5,h5 {
           
           }
        }
-      }
- 
-    
+}
 
+      
 .btn-download {
         text-decoration: none;
         display: inline-block;
@@ -1188,10 +1185,6 @@ h6.subscribe-text   {
    padding-right: 1rem;
 
 }
-
-
- 
-
 @media (width >= 576px) {
   .page
     {
